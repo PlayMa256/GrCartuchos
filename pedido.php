@@ -10,9 +10,17 @@ include_once "funcoes/format_data.php";
 	<title></title>
 		<script src="js/jquery.js"></script>
 	<script src="js/mask.js" type="text/javascript"></script>
+	<script type="text/javascript" src="tinymce/tinymce.min.js"></script>
+<script type="text/javascript">
+tinymce.init({
+    selector: "textarea"
+ });
+</script>
+
 
 <script>
 jQuery(function($){
+	
 		$(".data").mask("99-99-9999");
 });
 </script>
@@ -59,6 +67,8 @@ jQuery(function($){
 </body>
 </html>
 <?php if(isset($_POST['acao']) && $_POST['acao'] == 'enviar'){
+
+
 	$fornecedor = trim($_POST['fornecedor']);
 
 
@@ -66,6 +76,7 @@ jQuery(function($){
 	$valor = trim($_POST['valor']);
 	$descricao = trim($_POST['descricao']);
 	$data = $_POST['data'];
+	$data = format_data($data);
 
 	$insert = mysql_query("INSERT INTO pedidos (id_fornecedor, descricao, valor, data) VALUES('$fornecedor', '$descricao', '$valor', '$data')") or die(mysql_error());
 	if($insert){

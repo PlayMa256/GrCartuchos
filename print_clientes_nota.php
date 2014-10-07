@@ -39,10 +39,13 @@ jQuery(function($){
 			</select>
 		</label>
 				<label>
-					<span>data - Apartir de: </span>
+					<span>DATA ENTRE:</span>
 					<input type="text" name="data" class="data" />
 				</label>
-
+				<label>
+					<span>E :</span>
+					<input type="text" name="data2" class="data" />
+				</label>
 				<input type="submit" value="Imprimir" />
 			</form>
 

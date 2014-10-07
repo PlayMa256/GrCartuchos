@@ -6,36 +6,10 @@ require_once "config.php";
 <head>
 		<link rel="stylesheet" href="css/style.css" />
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-	<title></title>
+	<title>Editar Clientes</title>
 	<script src="js/jquery.js"></script>
 	<script src="js/mask.js" type="text/javascript"></script>
 
-<script>
-$(document).ready(function(){
-	   	$(".cnpjlabel").hide();
-      	$(".ielabel").hide();
-       $(".cnpj").mask("99.999.999/9999-99");
-       //$(".ie").mask("999.999.999.999");
-
-
-function displayVals(){
-	      var campo = $("#tipo").val();
-	      if(campo == 'juridica'){
-	      	$(".cnpjlabel").show();
-	      	$(".ielabel").show();
-	      }else{
-	      	$(".cnpjlabel").hide();
-      		$(".ielabel").hide();
-	      }
-}
-
-$( "#tipo" ).change( displayVals );
-
-
-})
-
-
-</script>
 
 </head>
 
@@ -48,7 +22,7 @@ $( "#tipo" ).change( displayVals );
 
 	</div>
 		<div id="content">
-	<h3>Cadastrar cliente</h3>
+	<h3>Editar Clientes</h3>
 <form action="" method="post">
 		<label>
 			<span>Cliente</span>

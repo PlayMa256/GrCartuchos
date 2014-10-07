@@ -52,7 +52,7 @@ include_once "funcoes/format_data.php";?>
 				$Cliente = $_POST['cliente'];
 				$dataInicial = $_POST['data'];
 				$data = format_data($dataInicial);
-				$now = date('Y-m-d');
+				$now = format_data($_POST['data2']);
 
 
 				// echo 'data: '.$data;

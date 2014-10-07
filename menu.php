@@ -25,7 +25,7 @@
 
 				<li><a href="vendas.php">Cadastrar Vendas</a></li>
 
-				<li><a href="pedido.php">Cadastrar Pedidos</a></li>
+				
 
 				<li><a href="retiradas.php">Cadastrar Retiradas</a></li>
 
@@ -33,7 +33,11 @@
 				<li><a href="despesas.php">Cadastrar Despesas</a></li>
 				<li><a href="entrega_notinha.php">Cadastrar ENTREGAS</a></li>
 			</ul>
-
+			<h2>Fornecedores</h2>
+			<ul>
+				<li><a href="pedido.php">Cadastrar Pedidos</a></li>
+				<li><a href="list_pedidos.php">Listar Pedidos CADASTRADOS</a></li>
+			</ul>
 			<h2>Relatórios</h2>
 			<ul>
 				<li><a href="print_relatiorio_geral.php">Imprimir Relatório GERAL</a></li>
