@@ -1,3 +1,13 @@
+<?php include_once "config.php";
+include_once "funcoes/format_data.php";
+error_reporting(0);
+
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title></title>
 <style type="text/css" media="all">
 	#box{
 		width: 100%;
@@ -17,87 +27,97 @@
 	#total{
 		margin-top:50px;
 		font-size:20pt;
-	}
-	h4, h5{
-		font-weight: normal;
-	}
+	}	
 
 </style>
-<script type="text/javascript">
+</head>
+<script>
 	//window.print();
+	
 </script>
+<body>
+	<?php
+		include_once("header_print_entrega.php");
+	?>
+	<br />
+	
+	<div style="clear:both"></div>
 <div id="box">
-<table border="1" align="center" cellspacing="0">
-    <tr>
-        <td colspan="3"><h2 style="margin-bottom:-10px;">GR Cartuchos</h1>
-						<h4 style="margin-bottom:-23px;">Rua Andr&eacute; Madsen, 377 - Cosm&oacute;polis</h4>
-						<h5>(019) 3872-4872 | (019) 9-9203-7662</h5>
-        </td>
-        <td>
-        	<h2 style=" margin-bottom: 0;">Entrega</h2>
-        	<span>Data: <?php echo date('d-m-Y');?></span>
-        </td>
-    </tr>
-<?php
-	include 'config.php';
-	include 'funcoes/format_data.php';
-	$certo = 0;
+		<?php 
+			$cliente_id = trim($_POST['cliente']);
+			$pegaNomeCliente = mysql_query("SELECT nome FROM clientes WHERE id = '$cliente_id'");
+			$result = mysql_fetch_array($pegaNomeCliente);
+			$nomeCliente = $result['nome'];
 
-	$cliente_id = trim($_POST['cliente']);
-	$pegaNomeCliente = mysql_query("SELECT nome FROM clientes WHERE id = '$cliente_id'");
-	$result = mysql_fetch_array($pegaNomeCliente);
-	$nomeCliente = $result['nome'];
+			$quantidade_inserida = count($_POST['produto']);
+			$produtos = $_POST['produto'];
+			$valor = $_POST['valor'];
+			$quantidade = $_POST['quantidade'];
 
-	echo '<tr>
-        	<td colspan="4" style="font-weight:bold;text-align:left;">Cliente: '.$nomeCliente.'</td>
-    	 </tr>';
-    echo '<tr>
+			$data_entrega = date('Y-d-m');
+			$data_vencimento = date('Y-d-m', strtotime("+30 days"));
+
+
+			//implodes
+			$produtoImplode = implode("|", $produtos);
+			$quantidadeImplode = implode("|", $quantidade);
+			$valorImplode = implode("|", $valor);
+			$insercao = mysql_query("INSERT INTO entregas (id_cliente, produto, quantidade, valor, data_entrega, data_vencimento) VALUES ('$cliente_id', '$produtoImplode', '$quantidadeImplode', '$valorImplode', '$data_entrega', '$data_vencimento')") or die(mysql_error());
+			if(!$insercao){
+				echo '<script>alert("nao foi possivel inserir no banco de dados");</script>';
+			}
+
+
+
+		?>
+	<span style="float:left;">Nota n&uacute;mero: <?php echo mysql_insert_id();?></span>
+	<h2 style="text-align:center"><?php echo utf8_encode($nomeCliente); ?></h2>
+	<table border="1" align="center" cellspacing="0">
+		<tr>
 			<td style="font-weight:bold;text-align:center;">Qtde</td>
 			<td style="font-weight:bold;text-align:center;">Produto</td>
 			<td style="font-weight:bold;text-align:center;">Valor</td>
 			<td style="font-weight:bold;text-align:center;">Total</td>
-		</tr>';
+		</tr>
+			<?php
+				$TotalGeral = 0;
+				$dataInicial = $_POST['data'];
+				
+				for($i = 0;$i<$quantidade_inserida;$i++){
+					$total = $valor[$i]*$quantidade[$i];
+					echo "<tr>";
+						echo '<td>'.$quantidade[$i].'</td>';
+						echo '<td>'.$produtos[$i].'</td>';
+						echo '<td>'.$valor[$i].'</td>';
+						echo '<td>'.$total.'</td>';
+					echo "</tr>";
+					$TotalGeral += $total;
+					$total = 0;
 
-	$prod = $_POST['produto'];
-	$qtd = $_POST['quantidade'];
-	$valor = $_POST['valor'];
-	$metodo = trim($_POST['op']);
-	$data = (empty($_POST['data'])) ? date("d-m-Y") : trim($_POST['data']);
-	$data = format_data($data);
-	$TotalGeral = 0;
-
-	$quantidadeValores = count($_POST['produto']);
-
-	//print_r ($_POST['produto']);
-
-	for($i = 0; $i<$quantidadeValores;$i++){
-
-		$produtonovo = $prod[$i];
-		$quantidade = $qtd[$i];
-		$valorNovo = $valor[$i];
-		$valorNovo = str_replace(",", ".", $valorNovo);
-
-		//	echo $produtonovo;
-
-		$total = $quantidade * $valorNovo;
-		$TotalGeral += $total;
+				}
+				
 
 
-		$insert = mysql_query("INSERT INTO entregas (cliente, id_cliente, produto, quantidade, valor, total, metodo, data) VALUES('$nomeCliente', '$cliente_id', '$produtonovo', '$quantidade', '$valorNovo', '$total', '$metodo', '$data')") or die(mysql_error());
-		if($insert){
-			$certo++;
-		}
 
-   echo '<tr>
-	        <td>'.$quantidade.'</td>
-	        <td>'.$produtonovo.'</td>
-	        <td>R$'.$valorNovo.'</td>
-	        <td>R$'.$total.',00</td>
-         </tr>';
-	}
+			?>
+	</table>
 
 
-?>
-</table>
-	<?php echo '<h1 align="center">Total: R$'.(float)$TotalGeral.',00</h1>'?>
-</div>
+	<?php 
+		echo '<h1>Total: R$'.(float)$TotalGeral.',00</h1>';
+		?>
+		<!-- <h1 id="total">Total: 192,00</h1> -->
+
+		<div id="dados">
+	        <span>Dados para dep&oacute;sito</span>
+	        <p><strong>Banco Ita&uacute;</strong></p>
+	        <p><strong>Ag&ecirc;ncia</strong>: 3297</p>
+	        <p><strong>Conta</strong>: 30183-4</p>
+	        <p><strong>Titular</strong>: Renato Gon&ccedil;alves da Silva</p>
+	    </div>
+	</div>
+
+
+
+</body>
+</html>

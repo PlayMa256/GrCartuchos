@@ -63,12 +63,11 @@ function AddCampo(id){
 			<input type="text" name="valor[]" />
 		</label>
 		<div id="img-extra"></div>
-		<label>
+<!-- 		<label>
 			<span>Data(dd-mm-aaaa)</span>
 			<input type="text" name="data" class="data" />
-		</label>
+		</label> -->
 
-	
 		<input type="submit" value="Enviar" />
 		<input type="hidden" name="acao" value="enviar" />
 	</form>

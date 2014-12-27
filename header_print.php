@@ -14,6 +14,7 @@
         #logo > img{
 
             height: 100px;
+            
         }
         #content{
             float:left;
@@ -54,8 +55,8 @@
         <p>Telefone: 3872-4872 | Celular: 9 9203-7662</p>
     </div>
     <div id="data">
-    	<p>10-10-2010</p>
-    	<p>N&ordm;: 12930129083</p>
+    	<p><?php echo date("d-m-Y");?></p>
+    	<!-- <p>N&ordm;: 12930129083</p> -->
     </div>
 </div>
 </body>

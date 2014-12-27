@@ -33,6 +33,12 @@ include_once "funcoes/format_data.php";?>
 	
 </script>
 <body>
+	<?php
+		include_once("header_print.php");
+	?>
+	<br />
+	
+	<div style="clear:both"></div>
 <div id="box">
 		<?php $cliente_id = trim($_POST['cliente']);
 	$pegaNomeCliente = mysql_query("SELECT nome FROM clientes WHERE id = '$cliente_id'");
@@ -59,7 +65,7 @@ include_once "funcoes/format_data.php";?>
 				// echo 'datanow = '.$now;
 
 				$TotalGeral = 0;
-				$select = mysql_query("SELECT * FROM vendas WHERE data BETWEEN '$data' AND '$now' AND id_cliente = '$Cliente' AND status = 1 AND metodo = 'aprazo'") or die(mysql_error());
+				$select = mysql_query("SELECT * FROM vendas WHERE data BETWEEN '$data' AND '$now' AND id_cliente = '$Cliente' AND status = 1 AND metodo = 'aprazo' ORDER BY data ASCS") or die(mysql_error());
 				while($res = mysql_fetch_array($select)){
 					$TotalGeral += $res['total'];
 					$valores = str_replace(".", ",", $res['valor']);
@@ -76,28 +82,6 @@ include_once "funcoes/format_data.php";?>
 				}
 
 			?>
-<!-- 		<tr>
-			<td>1</td>
-			<td>cb 540</td>
-			<td>75,00</td>
-			<td>75,00</td>
-			<td>01-01-2014</td>
-		</tr>
-				<tr>
-			<td>1</td>
-			<td>toner 12A</td>
-			<td>75,00</td>
-			<td>75,00</td>
-			<td>01-01-2014</td>
-		</tr>
-				<tr>
-			<td>1</td>
-			<td>resto de conta</td>
-			<td>75,00</td>
-			<td>75,00</td>
-			<td>01-01-2014</td>
-		</tr> -->
-
 	</table>
 
 

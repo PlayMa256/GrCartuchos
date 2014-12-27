@@ -20,9 +20,7 @@ include_once "diffData.function.php";
 	
 		<div id="content">
 			<?php
-			
 					date_default_timezone_set('America/Sao_Paulo');
-
 					$procura = mysql_query("SELECT * FROM backup ORDER BY id LIMIT 1") or die(mysql_error());
 					$res = mysql_fetch_array($procura);
 					$data = $res['data'];
