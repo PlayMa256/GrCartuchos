@@ -13,6 +13,11 @@
 
 					
 			</ul>
+			<h2>Edi&ccedil;&atilde;o</h2>
+			<ul>
+				<li><a href="editClientes.php">Editar Clientes</a></li>
+				
+			</ul>
 			<h2>Pagamentos</h2>
 			<ul>
 				<li><a href="AdicionarPagamento.php">Pagamento de clientes</a></li>

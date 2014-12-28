@@ -65,7 +65,7 @@ include_once "funcoes/format_data.php";?>
 				// echo 'datanow = '.$now;
 
 				$TotalGeral = 0;
-				$select = mysql_query("SELECT * FROM vendas WHERE data BETWEEN '$data' AND '$now' AND id_cliente = '$Cliente' AND status = 1 AND metodo = 'aprazo' ORDER BY data ASCS") or die(mysql_error());
+				$select = mysql_query("SELECT * FROM vendas WHERE data BETWEEN '$data' AND '$now' AND id_cliente = '$Cliente' AND status = 1 AND metodo = 'aprazo' ORDER BY data ASC") or die(mysql_error());
 				while($res = mysql_fetch_array($select)){
 					$TotalGeral += $res['total'];
 					$valores = str_replace(".", ",", $res['valor']);

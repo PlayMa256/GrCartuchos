@@ -19,20 +19,16 @@ include "config.php";?>
 			<table border="1">
 				<tr>
 					<td style="font-weight:bold;font-size:20px">Nome</td>
-					<td style="font-weight:bold;font-size:20px">CNPJ</td>
-					<td style="font-weight:bold;font-size:20px">IE</td>
-					<td style="font-weight:bold;font-size:20px">Endereço</td>
 					<td style="font-weight:bold;font-size:20px">Telefone</td>
+					<td style="font-weight:bold;font-size:20px">A&ccedil;&atilde;o</td>
 				</tr>
 				<?php
 					$query = mysql_query("SELECT * FROM clientes ORDER BY nome ASC");
 					while($res = mysql_fetch_array($query)){
 						echo '<tr>
-					<td>'.$res['nome'].'</td>
-					<td>'.$res['cnpj'].'</td>
-					<td>'.$res['ie'].'</td>
-					<td>'.$res['endereco'].'</td>
+					<td>'.utf8_encode($res['nome']).'</td>
 					<td>'.$res['telefone'].'</td>
+					<td><a href="editClient.php?id='.$res['id'].'">EDITAR</a></td>
 				</tr>';
 					}
 
