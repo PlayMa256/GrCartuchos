@@ -71,3 +71,10 @@ background:#ccc;
 	display: block;
 }
 
+#content table td{
+	padding:5px;
+
+}
+#content table tr th{
+	font-weight: bold;
+}

@@ -36,6 +36,7 @@
 			<h2>Estoque</h2>
 				<ul>
 					<li><a href="entrada_produtos.php">Entrada de produtos</a></li>
+					<li><a href="relatorio_estoque.php">Relatório Diário</a></li>
 				</ul>
 			
 
