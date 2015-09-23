@@ -124,8 +124,10 @@ if(isset($_POST['acao']) && $_POST['acao'] == 'pagar'){
 		$mysql_query = mysql_query("SELECT * FROM vendas WHERE id='$idConta'");
 		$res = mysql_fetch_array($mysql_query);
 		$total = $res['total'];
+		$dia_atual = date('Y-m-d');
 
 		$update = mysql_query("UPDATE vendas SET status = 0 WHERE id = '$idConta'");
+		$inserirNoPagamento = mysql_query("INSERT INTO pagamento_efetuado (id_item, data) VALUES ('$idConta', '$dia_atual') ");
 
 		if($update){
 			echo '<br/><strong>pagamento atualizado</strong>';

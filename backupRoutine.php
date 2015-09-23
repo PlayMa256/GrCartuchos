@@ -4,7 +4,7 @@ include("config.php");
 function backup_db(){
   $folder = '../../../Users/adm/Dropbox/BackupGR/';
 /* Store All Table name in an Array */
-$allTables = array("clientes", "despesas", "fornecedores", "fretes", "pedidos", "retiradas", "vendas");
+$allTables = array("clientes", "despesas", "fornecedores", "fretes", "pedidos", "retiradas", "vendas", "pagamento_efetuado");
 $result1 = mysql_query('SHOW TABLES');
 while($row = mysql_fetch_row($result1)){
      $allTables[] = $row[0];

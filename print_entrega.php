@@ -53,6 +53,7 @@ error_reporting(0);
 			$produtos = $_POST['produto'];
 			$valor = $_POST['valor'];
 			$quantidade = $_POST['quantidade'];
+			$metodo = $_POST['op'];
 
 			$data_entrega = date('Y-d-m');
 			$data_vencimento = date('Y-d-m', strtotime("+30 days"));
@@ -63,14 +64,29 @@ error_reporting(0);
 			$quantidadeImplode = implode("|", $quantidade);
 			$valorImplode = implode("|", $valor);
 			$insercao = mysql_query("INSERT INTO entregas (id_cliente, produto, quantidade, valor, data_entrega, data_vencimento) VALUES ('$cliente_id', '$produtoImplode', '$quantidadeImplode', '$valorImplode', '$data_entrega', '$data_vencimento')") or die(mysql_error());
-			if(!$insercao){
-				echo '<script>alert("nao foi possivel inserir no banco de dados");</script>';
+			$ultimo = mysql_insert_id();
+			for($i = 0;$i<count($produtos);$i++){
+				$totalll = 0;
+				$Produto = $produtos[$i];
+				$Valor = $valor[$i];
+				$Quantidade = $quantidade[$i];
+				$totalll += $Valor*$Quantidade;
+
+				$insert = mysql_query("INSERT INTO vendas (cliente, id_cliente, produto, quantidade, valor, total, metodo, data) 
+					                                VALUES('$nomeCliente', '$cliente_id', '$Produto', '$Quantidade', '$Valor', '$total', '$metodo', '$data_entrega')") or die(mysql_error());
+				$movimentacao = mysql_query("INSERT INTO movimentacao (id_produto, quantidade, data, valor, tipo) VALUES ('$Produto', '$Quantidade', '$data_entrega', '$Valor', '0')");
+
 			}
 
 
+	if($certo != count($produtos) && !$insercao){
+		echo '<script>alert("inserido com sucesso");</script>';
+	}else{
+		echo '<script>alert("inserido com sucesso");</script>';
 
-		?>
-	<span style="float:left;">Nota n&uacute;mero: <?php echo mysql_insert_id();?></span>
+	}
+?>
+	<span style="float:left;">Nota n&uacute;mero: <?php echo $ultimo;?></span>
 	<h2 style="text-align:center"><?php echo utf8_encode($nomeCliente); ?></h2>
 	<table border="1" align="center" cellspacing="0">
 		<tr>
@@ -89,22 +105,18 @@ error_reporting(0);
 						echo '<td>'.$quantidade[$i].'</td>';
 						echo '<td>'.$produtos[$i].'</td>';
 						echo '<td>'.$valor[$i].'</td>';
-						echo '<td>'.$total.'</td>';
+						echo '<td>'.$total.',00</td>';
 					echo "</tr>";
 					$TotalGeral += $total;
 					$total = 0;
 
 				}
-				
-
-
-
 			?>
 	</table>
 
 
 	<?php 
-		echo '<h1>Total: R$'.(float)$TotalGeral.',00</h1>';
+		echo '<h1 id="total">Total: R$'.(float)$TotalGeral.',00</h1>';
 		?>
 		<!-- <h1 id="total">Total: 192,00</h1> -->
 
@@ -116,8 +128,6 @@ error_reporting(0);
 	        <p><strong>Titular</strong>: Renato Gon&ccedil;alves da Silva</p>
 	    </div>
 	</div>
-
-
 
 </body>
 </html>

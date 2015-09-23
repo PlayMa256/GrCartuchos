@@ -43,7 +43,7 @@ $( "#tipo" ).change( displayVals );
 <?php
 	$id = (int) $_GET['id'];
 	$sel = mysql_query("SELECT * FROM clientes WHERE id = '$id'");
-	$reultado = mysql_fetch_array($sel);
+	$resultado = mysql_fetch_array($sel);
 ?>
 	<div id="box">
 	<?php
@@ -99,7 +99,7 @@ $( "#tipo" ).change( displayVals );
 	$email = trim($_POST['email']);
 	
 
-	$insert = mysql_query("UPDATE clientes SET nome= '$nome', endereco='$endereco', email='$email', cnpj='$cnpj', ie='$ie', telefone = '$telefone' WHERE id = '$id'") or die(mysql_error());
+	$insert = mysql_query("UPDATE clientes SET nome= '$cliente', endereco='$end', email='$email', cnpj='$cnpj', ie='$ie', telefone = '$telefone' WHERE id = '$id'") or die(mysql_error());
 	if($insert){
 		echo '<script>alert("alterado com sucesso");location.href="listClientes.php";</script>';
 	}else{

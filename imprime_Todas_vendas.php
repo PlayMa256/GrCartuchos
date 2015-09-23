@@ -6,7 +6,7 @@ $cliente_id = trim($_POST['id_cliente']);
 	$pegaNomeCliente = mysql_query("SELECT nome FROM clientes WHERE id = '$cliente_id'");
 	$result = mysql_fetch_array($pegaNomeCliente);
 	$nomeCliente = $result['nome']; ?>
-	<h2 style="text-align:center"><?php echo utf8_encode($nomeCliente); ?></h2>
+	<h2 style="text-align:center"><?php echo $nomeCliente; ?></h2>
 	<table border="1" align="center" cellspacing="0">
 		<tr>
 			<td style="font-weight:bold;text-align:center;">Qtde</td>

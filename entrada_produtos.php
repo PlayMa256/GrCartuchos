@@ -35,7 +35,7 @@ function AddCampo(id){
 				?>
 			
 		
-         el.innerHTML += '<br /><label><span>Quantidade</span><input type="text" name="quantidade[]" /></label>'+k+'<label><span>Valor</span><input type="text" name="valor[]" /></label><br />';
+         el.innerHTML += '<br /><label><span>Quantidade</span><input type="text" name="quantidade[]" /></label>'+k;
   }
 
 </script>
@@ -49,18 +49,6 @@ function AddCampo(id){
 	
 		<div id="content">
 	<form action="" method="post">
-		<label>
-			<span>Cliente</span>
-			<select name="cliente" id="">
-				<?php
-					$select = mysql_query("SELECT * FROM clientes ORDER BY nome ASC");
-					while($res = mysql_fetch_array($select)){
-						echo '<option value="'.utf8_encode($res['id']).'">'.utf8_encode($res['nome']).'</option>';
-					}
-				?>
-			</select>
-		</label>
-
    <a href="#"  onclick="AddCampo('img-extra')">Add Campo</a>
 		<label>
 			<span>Quantidade</span>
@@ -79,20 +67,7 @@ function AddCampo(id){
 					?>
 			</select>
 		</label>
-		<label>
-			<span>Valor</span>
-			<input type="text" name="valor[]" />
-		</label>
 		<div id="img-extra"></div>
-		<select name="op" id="">
-			<option value="aprazo">A Prazo</option>
-			<option value="avista">A Vista</option>
-		</select>
-		<label>
-			<span>Data(dd-mm-aaaa)</span>
-			<input type="text" name="data" class="data" />
-		</label>
-
 	
 		<input type="submit" value="Enviar" />
 		<input type="hidden" name="acao" value="enviar" />
@@ -104,47 +79,19 @@ function AddCampo(id){
 </html>
 <?php if(isset($_POST['acao']) && $_POST['acao'] == 'enviar'){
 
-
-
 	$certo = 0;
+	$produtos = $_POST['produto'];
+	$quantidades = $_POST['quantidade'];
+	$quantidadeValores = count($produtos);
+	for($i=0;$i<count($produtos);$i++){
+		$produto = $produtos[$i];
+		$quantidade = $quantidades[$i];
+		$data = date("Y-m-d");
 
-	$cliente_id = trim($_POST['cliente']);
-	$pegaNomeCliente = mysql_query("SELECT nome FROM clientes WHERE id = '$cliente_id'");
-	$result = mysql_fetch_array($pegaNomeCliente);
-	$nomeCliente = $result['nome'];
-
-
-	$prod = $_POST['produto'];
-	$qtd = $_POST['quantidade'];
-	$valor = $_POST['valor'];
-	$metodo = trim($_POST['op']);
-	$data = trim($_POST['data']);
-	$data = format_data($data);
-
-	$quantidadeValores = count($_POST['produto']);
-
-	//print_r ($_POST['produto']);
-
-	for($i = 0; $i<$quantidadeValores;$i++){
-
-		$produtonovo = $prod[$i];
-		$nome_produto = retornaNomeProduto($produtonovo);
-		$quantidade = $qtd[$i];
-		$valorNovo = $valor[$i];
-		$valorNovo = str_replace(",", ".", $valorNovo);
-
-		//	echo $produtonovo;
-
-		$total = $quantidade * $valorNovo;
-
-
-		$insert = mysql_query("INSERT INTO vendas (cliente, id_cliente, produto, quantidade, valor, total, metodo, data) VALUES('$nomeCliente', '$cliente_id', '$nome_produto', '$quantidade', '$valorNovo', '$total', '$metodo', '$data')") or die(mysql_error());
-		if($insert){
-			$certo++;
-		}
-		$movimentacao = mysql_query("INSERT INTO movimentacao (id_produto, quantidade, data, valor, tipo) VALUES ('$produtonovo', '$quantidade', '$data', '$valorNovo', '0')");
-
-
+		$movimentacao = mysql_query("INSERT INTO movimentacao (id_produto, quantidade, data, tipo) VALUES ('$produto', '$quantidade', '$data', 1");
+			if($movimentacao){
+				$certo++;
+			}
 
 	}
 

@@ -63,6 +63,10 @@ function AddCampo(id){
 			<input type="text" name="valor[]" />
 		</label>
 		<div id="img-extra"></div>
+		<select name="op" id="">
+			<option value="aprazo">A Prazo</option>
+			<option value="avista">A Vista</option>
+		</select>
 <!-- 		<label>
 			<span>Data(dd-mm-aaaa)</span>
 			<input type="text" name="data" class="data" />
