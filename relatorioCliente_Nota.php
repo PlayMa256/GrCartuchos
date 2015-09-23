@@ -76,7 +76,7 @@ include_once "funcoes.php";
 
 					echo '<tr>
 							<td style="text-align:center">'.$res['quantidade'].'</td>
-							<td>'.retornaNomeProduto($res['produto']).'</td>
+							<td>'.$res['produto'].'</td>
 							<td>'.$valores.'</td>
 							<td>'.$totais.',00</td>
 							<td>'.$data.'</td>
