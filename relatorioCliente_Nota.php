@@ -1,5 +1,7 @@
 <?php include_once "config.php";
-include_once "funcoes/format_data.php";?>
+include_once "funcoes/format_data.php";
+include_once "funcoes.php";
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
@@ -74,7 +76,7 @@ include_once "funcoes/format_data.php";?>
 
 					echo '<tr>
 							<td style="text-align:center">'.$res['quantidade'].'</td>
-							<td>'.$res['produto'].'</td>
+							<td>'.retornaNomeProduto($res['produto']).'</td>
 							<td>'.$valores.'</td>
 							<td>'.$totais.',00</td>
 							<td>'.$data.'</td>

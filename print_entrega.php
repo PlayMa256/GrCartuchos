@@ -1,7 +1,7 @@
 <?php include_once "config.php";
 include_once "funcoes/format_data.php";
 error_reporting(0);
-
+include_once "funcoes.php";
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
@@ -103,7 +103,7 @@ error_reporting(0);
 					$total = $valor[$i]*$quantidade[$i];
 					echo "<tr>";
 						echo '<td>'.$quantidade[$i].'</td>';
-						echo '<td>'.$produtos[$i].'</td>';
+						echo '<td>'.retornaNomeProduto($produtos[$i]).'</td>';
 						echo '<td>'.$valor[$i].'</td>';
 						echo '<td>'.$total.',00</td>';
 					echo "</tr>";
