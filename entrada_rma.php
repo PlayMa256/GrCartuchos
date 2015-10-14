@@ -47,6 +47,7 @@ function AddCampo(id){
 		include "menu.php";?>
 		<div id="content">
 			<form action="" method="post">
+				<legend>Entrada de rma</legend>
 				<label for="">
 					<span>Fornecedor</span>
 					<select name="fornecedor" id="">
@@ -120,7 +121,7 @@ function AddCampo(id){
 		if($quantidade_existente == 0){
 			$insere = mysql_query("INSERT INTO estoque (id_produto, quantidade, inserted_at) VALUES ('$produto', '$quantidade', '$data')");
 		}
-		$movimentacao = mysql_query("INSERT INTO movimentacao (id_produto, id_fornecedor, numero_nota, quantidade, valor, data, tipo) VALUES ('$produto', '$fornecedor', '$nota_fiscal', '$quantidade','$valor', '$data', 1)") or die(mysql_error());
+		$movimentacao = mysql_query("INSERT INTO movimentacao (id_produto, id_fornecedor, numero_nota, quantidade, valor, data, tipo) VALUES ('$produto', '$fornecedor', '$nota_fiscal', '$quantidade','$valor', '$data', 3)") or die(mysql_error());
 			if($insere || $movimentacao){
 				$certo++;
 			}
