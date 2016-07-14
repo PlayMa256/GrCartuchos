@@ -39,6 +39,11 @@
 					<li><a href="relatorio_estoque.php">Relatório Diário</a></li>
 				</ul>
 			
+			<h2>Manuten&ccedil;&atilde;o</h2>
+			<ul>
+				<li><a href="saida_manutencao.php">Saida para manuten&ccedil;&atilde;o</a></li>
+				<li><a href="entrada_rma.php">Entrada manuten&ccedil;&atilde;o</a></li>
+			</ul>
 
 			<!-- <h2>Estoque</h2>
 			<ul>

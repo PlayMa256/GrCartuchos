@@ -35,7 +35,7 @@ function AddCampo(id){
 				?>
 			
 		
-         el.innerHTML += '<br /><label><span>Quantidade</span><input type="text" name="quantidade[]" /></label>'+k+'<label for=""><span>Valor</span><input type="text" name="valor[]" id="" /></label>';
+         el.innerHTML += '<br /><label><span>Quantidade</span><input type="text" name="quantidade[]" /></label>'+k;
   }
 
 </script>
@@ -47,24 +47,7 @@ function AddCampo(id){
 		include "menu.php";?>
 		<div id="content">
 			<form action="" method="post">
-				<label for="">
-					<span>Fornecedor</span>
-					<select name="fornecedor" id="">
-						<option value="" selected>Selecione um fornecedor</option>
-						<?php
-							$procura_fornecedor = mysql_query("SELECT * FROM fornecedores");
-							while($resultados = mysql_fetch_array($procura_fornecedor)){
-								echo '<option value="'.$resultados['id'].'">'.$resultados['nome'].'</option>';
-							}
-
-						?>
-					</select>
-				</label>
-				<label for="">
-					<span>Nota fiscal</span>
-					<input type="text" name="notafiscal" id="" />
-				</label>
-				<br/>
+			<legend>Saida de produtos para manuten&ccedil;&atilde;o</legend>
 	   			<a href="#"  onclick="AddCampo('img-extra')">Add Campo</a>
 				<label>
 					<span>Quantidade</span>
@@ -82,10 +65,6 @@ function AddCampo(id){
 							}
 							?>
 					</select>
-				</label>
-				<label for="">
-					<span>Valor</span>
-					<input type="text" name="valor[]" id="" />
 				</label>
 				<div id="img-extra"></div>
 			
@@ -113,15 +92,8 @@ function AddCampo(id){
 		$valor = $valores[$i];
 		$data = date("Y-m-d");
 
-
-		$procura_existe = mysql_query("SELECT * FROM estoque WHERE id_produto = '$produto'");
-		$quantidade_existente = mysql_num_rows($procura_existe);
-		$insere = false;
-		if($quantidade_existente == 0){
-			$insere = mysql_query("INSERT INTO estoque (id_produto, quantidade, inserted_at) VALUES ('$produto', '$quantidade', '$data')");
-		}
-		$movimentacao = mysql_query("INSERT INTO movimentacao (id_produto, id_fornecedor, numero_nota, quantidade, valor, data, tipo) VALUES ('$produto', '$fornecedor', '$nota_fiscal', '$quantidade','$valor', '$data', 1)") or die(mysql_error());
-			if($insere || $movimentacao){
+		$movimentacao = mysql_query("INSERT INTO movimentacao (id_produto, quantidade, data, tipo) VALUES ('$produto', '$quantidade', CURDATE(), 2)") or die(mysql_error());
+			if($movimentacao){
 				$certo++;
 			}
 	}

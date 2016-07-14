@@ -14,15 +14,23 @@ include_once "funcoes/format_data.php";
 <script>
 jQuery(function($){
 		$(".data").mask("99-99-9999");
-
-
-
 });
 </script>
 <script type="text/javascript">
 function AddCampo(id){
          el = document.getElementById(id);
-         el.innerHTML += '<br /><label><span>Quantidade</span><input type="text" name="quantidade[]" /></label><label><span>Produto</span><input type="text" name="produto[]" /></label><label><span>Valor</span><input type="text" name="valor[]" /></label><br />';
+         el.innerHTML += '<br />';
+         el.innerHTML +='<label><span>Quantidade</span><input type="text" name="quantidade[]" /></label>';
+         
+         var produto = '<?php 
+					$select2 = mysql_query("SELECT * FROM produtos ORDER BY nome ASC");
+					while($res = mysql_fetch_array($select2)){
+						echo '<option value="'.$res['id'].'">'.$res['nome'].'</option>';
+					}
+				?>';
+         el.innerHTML +='<label><span>Produto</span>';
+         el.innerHTML += '<select name="produto[]">'+produto+'</select></label>';
+         el.innerHTML += '<label><span>Valor</span><input type="text" name="valor[]" /></label><br />';
   }
 
 </script>
@@ -56,7 +64,14 @@ function AddCampo(id){
 		</label>
 		<label>
 			<span>Produto</span>
-			<input type="text" name="produto[]" />
+			<select name="produto[]">
+				<?php 
+					$select2 = mysql_query("SELECT * FROM produtos ORDER BY nome ASC");
+					while($res = mysql_fetch_array($select2)){
+						echo '<option value="'.$res['id'].'">'.$res['nome'].'</option>';
+					}
+				?>
+			</select>
 		</label>
 		<label>
 			<span>Valor</span>

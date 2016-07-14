@@ -119,7 +119,7 @@ function AddCampo(id){
 	$valor = $_POST['valor'];
 	$metodo = trim($_POST['op']);
 	$data = trim($_POST['data']);
-	$data = format_data($data);
+	$data = ($data == null) ? date('Y-m-d') : format_data($data);
 
 	$quantidadeValores = count($_POST['produto']);
 

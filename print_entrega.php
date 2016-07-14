@@ -1,5 +1,5 @@
 <?php include_once "config.php";
-include_once "funcoes/format_data.php";
+include_once "funcoes.php";
 error_reporting(0);
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -66,13 +66,13 @@ error_reporting(0);
 			$ultimo = mysql_insert_id();
 			for($i = 0;$i<count($produtos);$i++){
 				$totalll = 0;
-				$Produto = $produtos[$i];
+				$Produto = retornaNomeProduto($produtos[$i]);
 				$Valor = $valor[$i];
 				$Quantidade = $quantidade[$i];
 				$totalll += $Valor*$Quantidade;
 
 				$insert = mysql_query("INSERT INTO vendas (cliente, id_cliente, produto, quantidade, valor, total, metodo, data) 
-					                                VALUES('$nomeCliente', '$cliente_id', '$Produto', '$Quantidade', '$Valor', '$total', '$metodo', '$data_entrega')") or die(mysql_error());
+					                                VALUES('$nomeCliente', '$cliente_id', '$Produto', '$Quantidade', '$Valor', '$total', '$metodo', CURDATE())") or die(mysql_error());
 				$movimentacao = mysql_query("INSERT INTO movimentacao (id_produto, quantidade, data, valor, tipo) VALUES ('$Produto', '$Quantidade', '$data_entrega', '$Valor', '0')");
 
 			}
@@ -102,7 +102,7 @@ error_reporting(0);
 					$total = $valor[$i]*$quantidade[$i];
 					echo "<tr>";
 						echo '<td>'.$quantidade[$i].'</td>';
-						echo '<td>'.$produtos[$i].'</td>';
+						echo '<td>'.retornaNomeProduto($produtos[$i]).'</td>';
 						echo '<td>'.$valor[$i].'</td>';
 						echo '<td>'.$total.',00</td>';
 					echo "</tr>";
@@ -119,13 +119,13 @@ error_reporting(0);
 		?>
 		<!-- <h1 id="total">Total: 192,00</h1> -->
 
-		<div id="dados">
+	<!-- 	<div id="dados">
 	        <span>Dados para dep&oacute;sito</span>
 	        <p><strong>Banco Ita&uacute;</strong></p>
 	        <p><strong>Ag&ecirc;ncia</strong>: 3297</p>
 	        <p><strong>Conta</strong>: 30183-4</p>
 	        <p><strong>Titular</strong>: Renato Gon&ccedil;alves da Silva</p>
-	    </div>
+	    </div> -->
 	</div>
 
 </body>

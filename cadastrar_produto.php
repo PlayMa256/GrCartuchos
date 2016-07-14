@@ -36,17 +36,7 @@ function AddCampo(id){
 	
 		<div id="content">
 	<form action="" method="post">
-		<label>
-			<span>Fornecedor</span>
-			<select name="fornecedor" id="">
-				<?php
-					$select = mysql_query("SELECT * FROM fornecedores ORDER BY nome ASC");
-					while($res = mysql_fetch_array($select)){
-						echo '<option value="'.utf8_encode($res['id']).'">'.utf8_encode($res['nome']).'</option>';
-					}
-				?>
-			</select>
-		</label>
+		<h2>Cadastro de produtos</h2>
 
    	<a href="#"  onclick="AddCampo('img-extra')">Add Campo</a>
 		<label>
