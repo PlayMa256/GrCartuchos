@@ -36,7 +36,7 @@ function AddCampo(id){
 			
 		
          el.innerHTML += '<br /><label><span>Quantidade</span><input type="text" name="quantidade[]" /></label>'+k+'<label><span>Valor</span><input type="text" name="valor[]" /></label><br />';
-  }
+}
 
 </script>
 

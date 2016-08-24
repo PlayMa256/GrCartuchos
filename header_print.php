@@ -51,6 +51,7 @@
     <!--<div style="clear: both"></div>-->
     <div id="content">
         <span class="titulo">Gr Cartuchos</span>
+        <p>CNPJ: 22.925.297/0001-39</p>
         <p>Rua Andr&eacute; Madsen, 377 - Vila Kallil - Cosm&oacute;polis</p>
         <p>Telefone: 3872-4872 | Celular: 9 9203-7662</p>
     </div>

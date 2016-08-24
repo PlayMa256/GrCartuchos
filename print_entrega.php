@@ -72,7 +72,7 @@ error_reporting(0);
 				$totalll += $Valor*$Quantidade;
 
 				$insert = mysql_query("INSERT INTO vendas (cliente, id_cliente, produto, quantidade, valor, total, metodo, data) 
-					                                VALUES('$nomeCliente', '$cliente_id', '$Produto', '$Quantidade', '$Valor', '$total', '$metodo', CURDATE())") or die(mysql_error());
+					                                VALUES('$nomeCliente', '$cliente_id', '$Produto', '$Quantidade', '$Valor', '$totalll', '$metodo', CURDATE())") or die(mysql_error());
 				$movimentacao = mysql_query("INSERT INTO movimentacao (id_produto, quantidade, data, valor, tipo) VALUES ('$Produto', '$Quantidade', '$data_entrega', '$Valor', '0')");
 
 			}
