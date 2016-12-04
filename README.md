@@ -1,4 +1,4 @@
-#GR Cartuchps
+# GR Cartuchps
 This project is an ERP (TS type) built to maintain a little family bussiness. It started when me (the developer) had a little experience
 with OO programming and newer techs. Now, to fit the bussiness needs, its beeing rebuild (on 2.0 branch) with nodejs (express) + sequelize + socket.io.
 
