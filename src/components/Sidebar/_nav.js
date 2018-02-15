@@ -37,11 +37,6 @@ export default {
 					icon: 'icon-puzzle'
 				},
 				{
-					name: 'Carousels',
-					url: '/base/carousels',
-					icon: 'icon-puzzle'
-				},
-				{
 					name: 'Collapses',
 					url: '/base/collapses',
 					icon: 'icon-puzzle'
@@ -54,11 +49,6 @@ export default {
 				{
 					name: 'Paginations',
 					url: '/base/paginations',
-					icon: 'icon-puzzle'
-				},
-				{
-					name: 'Progress Bar',
-					url: '/base/progress-bar',
 					icon: 'icon-puzzle'
 				},
 				{

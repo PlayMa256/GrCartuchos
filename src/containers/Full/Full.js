@@ -20,13 +20,11 @@ import Switches from '../../views/Base/Switches/';
 import Tables from '../../views/Base/Tables/';
 import Tabs from '../../views/Base/Tabs/';
 import Breadcrumbs from '../../views/Base/Breadcrumbs/';
-import Carousels from '../../views/Base/Carousels/';
 import Collapses from '../../views/Base/Collapses/';
 import Navbars from '../../views/Base/Navbars/';
 import Navs from '../../views/Base/Navs/';
 import Paginations from '../../views/Base/Paginations/';
 import Popovers from '../../views/Base/Popovers/';
-import ProgressBar from '../../views/Base/ProgressBar/';
 import Tooltips from '../../views/Base/Tooltips/';
 
 // Buttons
