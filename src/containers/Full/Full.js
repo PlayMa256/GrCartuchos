@@ -8,6 +8,8 @@ import Aside from '../../components/Aside/';
 import Footer from '../../components/Footer/';
 
 import Clientes from '../Clientes/index';
+import Produtos from '../Produtos/index';
+import Vendas from '../Vendas/index';
 
 import Dashboard from '../../views/Dashboard/';
 
@@ -33,7 +35,6 @@ import ButtonDropdowns from '../../views/Buttons/ButtonDropdowns/';
 import ButtonGroups from '../../views/Buttons/ButtonGroups/';
 import SocialButtons from '../../views/Buttons/SocialButtons/';
 
-// Notifications
 import Alerts from '../../views/Notifications/Alerts/';
 import Badges from '../../views/Notifications/Badges/';
 import Modals from '../../views/Notifications/Modals/';
@@ -50,19 +51,20 @@ class Full extends Component {
 						<Container fluid>
 							<Switch>
 								<Route path="/clientes" name="Clientes" component={Clientes} />
+								<Route path="/produtos" name="Produtos" component={Produtos} />
+								<Route path="/vendas" name="Vendas" component={Vendas} />
+
 								<Route path="/dashboard" name="Dashboard" component={Dashboard} />
 								<Route path="/base/cards" name="Cards" component={Cards} />
 								<Route path="/base/switches" name="Swithces" component={Switches} />
 								<Route path="/base/tables" name="Tables" component={Tables} />
 								<Route path="/base/tabs" name="Tabs" component={Tabs} />
 								<Route path="/base/breadcrumbs" name="Breadcrumbs" component={Breadcrumbs} />
-								<Route path="/base/carousels" name="Carousels" component={Carousels} />
 								<Route path="/base/collapses" name="Collapses" component={Collapses} />
 								<Route path="/base/navbars" name="Navbars" component={Navbars} />
 								<Route path="/base/navs" name="Navs" component={Navs} />
 								<Route path="/base/paginations" name="Paginations" component={Paginations} />
 								<Route path="/base/popovers" name="Popovers" component={Popovers} />
-								<Route path="/base/progress-bar" name="Progress Bar" component={ProgressBar} />
 								<Route path="/base/tooltips" name="Tooltips" component={Tooltips} />
 								<Route path="/buttons/buttons" name="Buttons" component={Buttons} />
 								<Route

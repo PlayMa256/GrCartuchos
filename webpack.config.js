@@ -103,7 +103,12 @@ module.exports = (env = {}) => {
           {from: './public/img', to: 'img'}
         ],
         {copyUnmodified: false}
+      ),
+      new webpack.ContextReplacementPlugin(
+        /moment[\/\\]locale$/,
+        /pt-br/
       )
+      
     ]
   }
 };
