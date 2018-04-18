@@ -35,10 +35,6 @@ module.exports = (env = {}) => {
           exclude: /node_modules/,
           use: {
             loader: 'babel-loader',
-            options: {
-              cacheDirectory: true,
-              presets: ['react', 'env']
-            }
           }
         },
         {
