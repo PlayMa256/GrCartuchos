@@ -11,6 +11,8 @@ import '../scss/core/_dropdown-menu-right.scss';
 // Containers
 import Full from './containers/Full/';
 
+import AsyncRoute from './components/AsyncRoute';
+
 // Views
 import Page404 from './views/Pages/Page404/';
 import Page500 from './views/Pages/Page500/';

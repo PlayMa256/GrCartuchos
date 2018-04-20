@@ -1,10 +1,26 @@
 {
   "presets": [
     ["react"],
-    ["env"]
+    [
+      "env",
+      {
+        "targets": {
+          "browsers": [
+            "> 1%",
+            "last 2 versions",
+            "not ie <=10",
+            "ie 11",
+            "Firefox ESR"
+          ]
+        },
+        "modules": false,
+        "useBuiltIns": true
+      }
+    ]
   ],
   "plugins": [
     "transform-object-rest-spread",
-    "transform-class-properties"
+    "transform-class-properties",
+    "syntax-dynamic-import"
   ]
 }
