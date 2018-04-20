@@ -21,10 +21,6 @@ import Cards from '../../views/Base/Cards/';
 import Switches from '../../views/Base/Switches/';
 import Tables from '../../views/Base/Tables/';
 import Tabs from '../../views/Base/Tabs/';
-import Breadcrumbs from '../../views/Base/Breadcrumbs/';
-import Collapses from '../../views/Base/Collapses/';
-import Navbars from '../../views/Base/Navbars/';
-import Navs from '../../views/Base/Navs/';
 import Paginations from '../../views/Base/Paginations/';
 import Popovers from '../../views/Base/Popovers/';
 import Tooltips from '../../views/Base/Tooltips/';
@@ -59,10 +55,6 @@ class Full extends Component {
 								<Route path="/base/switches" name="Swithces" component={Switches} />
 								<Route path="/base/tables" name="Tables" component={Tables} />
 								<Route path="/base/tabs" name="Tabs" component={Tabs} />
-								<Route path="/base/breadcrumbs" name="Breadcrumbs" component={Breadcrumbs} />
-								<Route path="/base/collapses" name="Collapses" component={Collapses} />
-								<Route path="/base/navbars" name="Navbars" component={Navbars} />
-								<Route path="/base/navs" name="Navs" component={Navs} />
 								<Route path="/base/paginations" name="Paginations" component={Paginations} />
 								<Route path="/base/popovers" name="Popovers" component={Popovers} />
 								<Route path="/base/tooltips" name="Tooltips" component={Tooltips} />

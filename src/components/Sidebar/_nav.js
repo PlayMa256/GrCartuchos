@@ -54,21 +54,6 @@ export default {
 			icon: 'icon-puzzle',
 			children: [
 				{
-					name: 'Breadcrumbs',
-					url: '/base/breadcrumbs',
-					icon: 'icon-puzzle'
-				},
-				{
-					name: 'Collapses',
-					url: '/base/collapses',
-					icon: 'icon-puzzle'
-				},
-				{
-					name: 'Navs',
-					url: '/base/navs',
-					icon: 'icon-puzzle'
-				},
-				{
 					name: 'Paginations',
 					url: '/base/paginations',
 					icon: 'icon-puzzle'
