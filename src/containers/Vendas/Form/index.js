@@ -22,7 +22,9 @@ import {
   InputGroupText
 } from "reactstrap";
 
-export default class ProductsForm extends React.PureComponent {
+import "./styles.scss";
+
+export default class SalesForm extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {
@@ -97,14 +99,17 @@ export default class ProductsForm extends React.PureComponent {
 
   render() {
     return (
-      <div className="form">
+      <div className="vendas-form">
         <Row>
           <Col md="12">
             <Card>
               <CardHeader>
-                <span>Cadastrar Venda</span>
+                <span>Cadastrar Vendas</span>
                 &nbsp;
-                <i className="fa fa-plus-square" onClick={this.addMoreFields} />
+                <i
+                  className="fa fa-plus-square addMore"
+                  onClick={this.addMoreFields}
+                />
               </CardHeader>
               <CardBody>
                 <Form
@@ -113,6 +118,28 @@ export default class ProductsForm extends React.PureComponent {
                   encType="multipart/form-data"
                   className="form-horizontal"
                 >
+                  <Row>
+                    <Col md="4">
+                      <FormGroup>
+                        <Label>Cliente</Label>
+                        <Input type="select" name="name">
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                          <option value="10">10</option>
+                          <option value="11">11</option>
+                          <option value="12">12</option>
+                        </Input>
+                      </FormGroup>
+                    </Col>
+                    <Col md="6" />
+                  </Row>
                   {this.renderFormFields()}
                 </Form>
               </CardBody>

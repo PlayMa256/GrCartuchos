@@ -24,7 +24,7 @@ import {
 
 export default function ProductsForm() {
 	return (
-		<div className="form">
+		<div className="products-form">
 			<Row>
 				<Col md="12">
 					<Card>

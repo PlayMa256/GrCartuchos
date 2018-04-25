@@ -24,7 +24,7 @@ import {
 
 export default function ClienteForm() {
 	return (
-		<div className="form">
+		<div className="clients-form">
 			<Row>
 				<Col md="12">
 					<Card>

@@ -5,9 +5,9 @@ const BUILD_DIR = path.resolve(__dirname, 'build');
 
 module.exports = merge(base, {
 	mode: "development",
-	devServer: {
+		devServer: {
 		contentBase: BUILD_DIR,
 		compress: true,
 		hot: true
-	}
+	},
 })
