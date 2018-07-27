@@ -24,7 +24,7 @@
     "sass-loader": "7.0.3",
     "source-list-map": "2.0.0",
     "style-loader": "0.21.0",
-    "uglify-js": "3.4.5",
+    "uglify-js": "3.4.6",
     "url-loader": "1.0.1",
     "webpack": "4.16.3",
     "webpack-dev-server": "3.1.5",
