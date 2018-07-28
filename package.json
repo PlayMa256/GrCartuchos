@@ -61,7 +61,8 @@
   },
   "lint-staged": {
     "*.{scss, js}": [
-      "prettier --write --single-quote=false"
+      "prettier --write --single-quote=false",
+      "git add"
     ],
     "*.{js,md}": [
       "npm run lint",
