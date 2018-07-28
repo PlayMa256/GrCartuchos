@@ -39,16 +39,12 @@ const config = merge(base, {
   },
   optimization: {
     runtimeChunk: true,
+    minimize: true,
     splitChunks: {
       cacheGroups: {
         vendors: {
           test: /[\\/]node_modules[\\/]/,
           priority: -10
-        },
-        default: {
-          minChunks: 2,
-          priority: -20,
-          reuseExistingChunk: true
         }
       }
     }
