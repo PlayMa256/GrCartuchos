@@ -11,16 +11,21 @@
     "babel-preset-env": "1.7.0",
     "babel-preset-react": "6.24.1",
     "copy-webpack-plugin": "4.5.2",
+    "cross-env": "5.2.0",
     "css-hot-loader": "1.4.1",
     "css-loader": "1.0.0",
-    "eslint-config-standard": "11.0.0",
+    "eslint": "5.2.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-prettier": "^2.6.2",
     "eslint-plugin-react": "7.10.0",
-    "eslint-plugin-standard": "3.1.0",
     "file-loader": "1.1.11",
     "html-loader": "0.5.5",
     "html-webpack-plugin": "3.2.0",
+    "husky": "^1.0.0-rc.13",
+    "lint-staged": "^7.2.0",
     "mini-css-extract-plugin": "0.4.1",
     "node-sass": "4.9.2",
+    "prettier": "^1.13.7",
     "sass-loader": "7.0.3",
     "source-list-map": "2.0.0",
     "style-loader": "0.21.0",
@@ -37,6 +42,7 @@
     "flag-icon-css": "3.0.0",
     "font-awesome": "4.7.0",
     "history": "4.7.2",
+    "popper.js": "1.14.3",
     "react": "16.4.1",
     "react-chartjs-2": "2.7.4",
     "react-dom": "16.4.1",
@@ -47,12 +53,19 @@
     "webpack-cli": "3.1.0",
     "webpack-serve": "^2.0.2"
   },
-  "scripts": {
-    "start": "webpack-dev-server --progress --color --mode development --config ./webpack.dev.js",
-    "build": "webpack -p --progress --env.prod --mode production --config ./webpack.prod.js"
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
-  "engines": {
-    "node": ">= 8.9.4",
-    "npm": ">= 5.6.0"
+  "lint-staged": {
+    "*.{js,json,css,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "scripts": {
+    "start": "cross-env NODE_ENV=development webpack-dev-server --progress --color --mode development --config ./webpack.dev.js",
+    "build": "cross-env NODE_ENV=production webpack --mode production --config ./webpack.prod.js"
   }
 }
