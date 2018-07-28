@@ -6,6 +6,11 @@ const BUILD_DIR = path.resolve(__dirname, "build");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const config = merge(base, {
+  output: {
+    path: BUILD_DIR,
+    filename: `[name].[hash].js`,
+    publicPath: "/"
+  },
   mode: "production",
   module: {
     rules: [
@@ -31,6 +36,22 @@ const config = merge(base, {
   ],
   performance: {
     hints: false
+  },
+  optimization: {
+    runtimeChunk: true,
+    splitChunks: {
+      cacheGroups: {
+        vendors: {
+          test: /[\\/]node_modules[\\/]/,
+          priority: -10
+        },
+        default: {
+          minChunks: 2,
+          priority: -20,
+          reuseExistingChunk: true
+        }
+      }
+    }
   }
 });
 
