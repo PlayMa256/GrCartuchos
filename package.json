@@ -4,6 +4,7 @@
   "license": "MIT",
   "devDependencies": {
     "babel-core": "6.26.3",
+    "babel-eslint": "8.2.6",
     "babel-loader": "7.1.5",
     "babel-plugin-syntax-dynamic-import": "6.18.0",
     "babel-plugin-transform-class-properties": "6.24.1",
@@ -59,13 +60,15 @@
     }
   },
   "lint-staged": {
-    "*.{js,json,css,md}": [
-      "prettier --write",
+    "*.{js,css,md}": [
+      "npm run lint",
+      "prettier --write --single-quote=false",
       "git add"
     ]
   },
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server --progress --color --mode development --config ./webpack.dev.js",
-    "build": "cross-env NODE_ENV=production webpack --mode production --config ./webpack.prod.js"
+    "build": "cross-env NODE_ENV=production webpack --mode production --config ./webpack.prod.js",
+    "lint": "eslint src/*"
   }
 }

@@ -1,8 +1,24 @@
-import React, {Component} from 'react';
-import {Row, Col, Card, CardHeader, CardBody, ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem, Button, ButtonGroup, ButtonToolbar, Input, InputGroup, InputGroupAddon, InputGroupText } from 'reactstrap';
+import React, { Component } from "react";
+import {
+  Row,
+  Col,
+  Card,
+  CardHeader,
+  CardBody,
+  ButtonDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
+  Button,
+  ButtonGroup,
+  ButtonToolbar,
+  Input,
+  InputGroup,
+  InputGroupAddon,
+  InputGroupText
+} from "reactstrap";
 
 class ButtonGroups extends Component {
-
   constructor(props) {
     super(props);
 
@@ -13,7 +29,9 @@ class ButtonGroups extends Component {
   }
 
   toggle(i) {
-    const newArray = this.state.dropdownOpen.map((element, index) => { return (index === i ? !element : false); });
+    const newArray = this.state.dropdownOpen.map((element, index) => {
+      return index === i ? !element : false;
+    });
     this.setState({
       dropdownOpen: newArray
     });
@@ -26,9 +44,13 @@ class ButtonGroups extends Component {
           <Col xs="12">
             <Card>
               <CardHeader>
-                <i className="fa fa-align-justify"></i><strong>Button Group</strong>
+                <i className="fa fa-align-justify" />
+                <strong>Button Group</strong>
                 <div className="card-actions">
-                  <a href="https://reactstrap.github.io/components/button-group/" target="_blank">
+                  <a
+                    href="https://reactstrap.github.io/components/button-group/"
+                    target="_blank"
+                  >
                     <small className="text-muted">docs</small>
                   </a>
                 </div>
@@ -43,7 +65,8 @@ class ButtonGroups extends Component {
             </Card>
             <Card>
               <CardHeader>
-                <i className="fa fa-align-justify"></i><strong>Button Toolbar</strong>
+                <i className="fa fa-align-justify" />
+                <strong>Button Toolbar</strong>
               </CardHeader>
               <CardBody>
                 <ButtonToolbar>
@@ -66,7 +89,9 @@ class ButtonGroups extends Component {
             </Card>
             <Card>
               <CardHeader>
-                <i className="fa fa-align-justify"></i><strong>Button Toolbar</strong> <small>mix with input groups</small>
+                <i className="fa fa-align-justify" />
+                <strong>Button Toolbar</strong>{" "}
+                <small>mix with input groups</small>
               </CardHeader>
               <CardBody>
                 <ButtonToolbar className="mb-3">
@@ -77,7 +102,9 @@ class ButtonGroups extends Component {
                     <Button>4</Button>
                   </ButtonGroup>
                   <InputGroup>
-                    <InputGroupAddon addonType="prepend"><InputGroupText>@</InputGroupText></InputGroupAddon>
+                    <InputGroupAddon addonType="prepend">
+                      <InputGroupText>@</InputGroupText>
+                    </InputGroupAddon>
                     <Input placeholder="Input group example" />
                   </InputGroup>
                 </ButtonToolbar>
@@ -89,7 +116,9 @@ class ButtonGroups extends Component {
                     <Button>4</Button>
                   </ButtonGroup>
                   <InputGroup>
-                    <InputGroupAddon addonType="prepend"><InputGroupText>@</InputGroupText></InputGroupAddon>
+                    <InputGroupAddon addonType="prepend">
+                      <InputGroupText>@</InputGroupText>
+                    </InputGroupAddon>
                     <Input placeholder="Input group example" />
                   </InputGroup>
                 </ButtonToolbar>
@@ -97,7 +126,8 @@ class ButtonGroups extends Component {
             </Card>
             <Card>
               <CardHeader>
-                <i className="fa fa-align-justify"></i><strong>Sizing</strong>
+                <i className="fa fa-align-justify" />
+                <strong>Sizing</strong>
               </CardHeader>
               <CardBody>
                 <ButtonGroup size="lg">
@@ -105,13 +135,13 @@ class ButtonGroups extends Component {
                   <Button>Middle</Button>
                   <Button>Right</Button>
                 </ButtonGroup>
-                <hr/>
+                <hr />
                 <ButtonGroup>
                   <Button>Left</Button>
                   <Button>Middle</Button>
                   <Button>Right</Button>
                 </ButtonGroup>
-                <hr/>
+                <hr />
                 <ButtonGroup size="sm">
                   <Button>Left</Button>
                   <Button>Middle</Button>
@@ -121,16 +151,20 @@ class ButtonGroups extends Component {
             </Card>
             <Card>
               <CardHeader>
-                <i className="fa fa-align-justify"></i><strong>Nesting</strong>
+                <i className="fa fa-align-justify" />
+                <strong>Nesting</strong>
               </CardHeader>
               <CardBody>
                 <ButtonGroup>
                   <Button>1</Button>
                   <Button>2</Button>
-                  <ButtonDropdown isOpen={this.state.dropdownOpen[0]} toggle={() => { this.toggle(0); }}>
-                    <DropdownToggle caret>
-                      Dropdown
-                    </DropdownToggle>
+                  <ButtonDropdown
+                    isOpen={this.state.dropdownOpen[0]}
+                    toggle={() => {
+                      this.toggle(0);
+                    }}
+                  >
+                    <DropdownToggle caret>Dropdown</DropdownToggle>
                     <DropdownMenu>
                       <DropdownItem>Dropdown Link</DropdownItem>
                       <DropdownItem>Dropdown Link</DropdownItem>
@@ -141,16 +175,20 @@ class ButtonGroups extends Component {
             </Card>
             <Card>
               <CardHeader>
-                <i className="fa fa-align-justify"></i><strong>Vertical variation</strong>
+                <i className="fa fa-align-justify" />
+                <strong>Vertical variation</strong>
               </CardHeader>
               <CardBody>
                 <ButtonGroup vertical>
                   <Button>1</Button>
                   <Button>2</Button>
-                  <ButtonDropdown isOpen={this.state.dropdownOpen[1]} toggle={() => { this.toggle(1); }}>
-                    <DropdownToggle caret>
-                      Dropdown
-                    </DropdownToggle>
+                  <ButtonDropdown
+                    isOpen={this.state.dropdownOpen[1]}
+                    toggle={() => {
+                      this.toggle(1);
+                    }}
+                  >
+                    <DropdownToggle caret>Dropdown</DropdownToggle>
                     <DropdownMenu>
                       <DropdownItem>Dropdown Link</DropdownItem>
                       <DropdownItem>Dropdown Link</DropdownItem>
@@ -162,7 +200,7 @@ class ButtonGroups extends Component {
           </Col>
         </Row>
       </div>
-    )
+    );
   }
 }
 

@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {Row, Col, Card, CardHeader, CardBody, Alert} from 'reactstrap';
+import React, { Component } from "react";
+import { Row, Col, Card, CardHeader, CardBody, Alert } from "reactstrap";
 
 class Alerts extends Component {
   constructor(props) {
@@ -23,9 +23,13 @@ class Alerts extends Component {
           <Col xs="12" md="6">
             <Card>
               <CardHeader>
-                <i className="fa fa-align-justify"></i><strong>Alerts</strong>
+                <i className="fa fa-align-justify" />
+                <strong>Alerts</strong>
                 <div className="card-actions">
-                  <a href="https://reactstrap.github.io/components/alerts/" target="_blank">
+                  <a
+                    href="https://reactstrap.github.io/components/alerts/"
+                    target="_blank"
+                  >
                     <small className="text-muted">docs</small>
                   </a>
                 </div>
@@ -46,47 +50,72 @@ class Alerts extends Component {
                 <Alert color="warning">
                   This is a warning alert — check it out!
                 </Alert>
-                <Alert color="info">
-                  This is a info alert — check it out!
-                </Alert>
+                <Alert color="info">This is a info alert — check it out!</Alert>
                 <Alert color="light">
                   This is a light alert — check it out!
                 </Alert>
-                <Alert color="dark">
-                  This is a dark alert — check it out!
-                </Alert>
+                <Alert color="dark">This is a dark alert — check it out!</Alert>
               </CardBody>
             </Card>
           </Col>
           <Col xs="12" md="6">
             <Card>
               <CardHeader>
-                <i className="fa fa-align-justify"></i><strong>Alerts</strong><small> use <code>.alert-link</code> to provide links</small>
+                <i className="fa fa-align-justify" />
+                <strong>Alerts</strong>
+                <small>
+                  {" "}
+                  use <code>.alert-link</code> to provide links
+                </small>
               </CardHeader>
               <CardBody>
                 <Alert color="primary">
-                  This is a primary alert with <a href="#" className="alert-link">an example link</a>. Give it a click if you like.
+                  This is a primary alert with{" "}
+                  <a href="#" className="alert-link">
+                    an example link
+                  </a>. Give it a click if you like.
                 </Alert>
                 <Alert color="secondary">
-                  This is a secondary alert with <a href="#" className="alert-link">an example link</a>. Give it a click if you like.
+                  This is a secondary alert with{" "}
+                  <a href="#" className="alert-link">
+                    an example link
+                  </a>. Give it a click if you like.
                 </Alert>
                 <Alert color="success">
-                  This is a success alert with <a href="#" className="alert-link">an example link</a>. Give it a click if you like.
+                  This is a success alert with{" "}
+                  <a href="#" className="alert-link">
+                    an example link
+                  </a>. Give it a click if you like.
                 </Alert>
                 <Alert color="danger">
-                  This is a danger alert with <a href="#" className="alert-link">an example link</a>. Give it a click if you like.
+                  This is a danger alert with{" "}
+                  <a href="#" className="alert-link">
+                    an example link
+                  </a>. Give it a click if you like.
                 </Alert>
                 <Alert color="warning">
-                  This is a warning alert with <a href="#" className="alert-link">an example link</a>. Give it a click if you like.
+                  This is a warning alert with{" "}
+                  <a href="#" className="alert-link">
+                    an example link
+                  </a>. Give it a click if you like.
                 </Alert>
                 <Alert color="info">
-                  This is a info alert with <a href="#" className="alert-link">an example link</a>. Give it a click if you like.
+                  This is a info alert with{" "}
+                  <a href="#" className="alert-link">
+                    an example link
+                  </a>. Give it a click if you like.
                 </Alert>
                 <Alert color="light">
-                  This is a light alert with <a href="#" className="alert-link">an example link</a>. Give it a click if you like.
+                  This is a light alert with{" "}
+                  <a href="#" className="alert-link">
+                    an example link
+                  </a>. Give it a click if you like.
                 </Alert>
                 <Alert color="dark">
-                  This is a dark alert with <a href="#" className="alert-link">an example link</a>. Give it a click if you like.
+                  This is a dark alert with{" "}
+                  <a href="#" className="alert-link">
+                    an example link
+                  </a>. Give it a click if you like.
                 </Alert>
               </CardBody>
             </Card>
@@ -96,19 +125,22 @@ class Alerts extends Component {
           <Col xs="12" md="6">
             <Card>
               <CardHeader>
-                <i className="fa fa-align-justify"></i><strong>Alerts</strong> <small>additional content</small>
+                <i className="fa fa-align-justify" />
+                <strong>Alerts</strong> <small>additional content</small>
               </CardHeader>
               <CardBody>
                 <Alert color="success">
                   <h4 className="alert-heading">Well done!</h4>
                   <p>
-                    Aww yeah, you successfully read this important alert message. This example text is going
-                    to run a bit longer so that you can see how spacing within an alert works with this kind
-                    of content.
+                    Aww yeah, you successfully read this important alert
+                    message. This example text is going to run a bit longer so
+                    that you can see how spacing within an alert works with this
+                    kind of content.
                   </p>
                   <hr />
                   <p className="mb-0">
-                    Whenever you need to, be sure to use margin utilities to keep things nice and tidy.
+                    Whenever you need to, be sure to use margin utilities to
+                    keep things nice and tidy.
                   </p>
                 </Alert>
               </CardBody>
@@ -117,10 +149,15 @@ class Alerts extends Component {
           <Col xs="12" md="6">
             <Card>
               <CardHeader>
-                <i className="fa fa-align-justify"></i><strong>Alerts</strong> <small>dismissing</small>
+                <i className="fa fa-align-justify" />
+                <strong>Alerts</strong> <small>dismissing</small>
               </CardHeader>
               <CardBody>
-                <Alert color="info" isOpen={this.state.visible} toggle={this.onDismiss}>
+                <Alert
+                  color="info"
+                  isOpen={this.state.visible}
+                  toggle={this.onDismiss}
+                >
                   I am an alert and I can be dismissed!
                 </Alert>
               </CardBody>
@@ -128,7 +165,7 @@ class Alerts extends Component {
           </Col>
         </Row>
       </div>
-    )
+    );
   }
 }
 

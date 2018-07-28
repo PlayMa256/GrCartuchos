@@ -71,8 +71,8 @@ module.exports = {
       copyUnmodified: false
     }),
     new HtmlWebpackPlugin({
-			inject: true,
-			template: "./public/index.html"
-		}),
+      inject: true,
+      template: "./public/index.html"
+    })
   ]
 };

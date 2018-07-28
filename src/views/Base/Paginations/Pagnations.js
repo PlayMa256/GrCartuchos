@@ -1,23 +1,28 @@
-import React, {Component} from 'react';
+import React, { Component } from "react";
 import {
   Row,
   Col,
   Card,
   CardHeader,
   CardBody,
-  Pagination, PaginationItem, PaginationLink
-} from 'reactstrap';
+  Pagination,
+  PaginationItem,
+  PaginationLink
+} from "reactstrap";
 
 class Paginations extends Component {
-
   render() {
     return (
       <div className="animated fadeIn">
         <Card>
           <CardHeader>
-            <i className="fa fa-align-justify"></i><strong>Pagination</strong>
+            <i className="fa fa-align-justify" />
+            <strong>Pagination</strong>
             <div className="card-actions">
-              <a href="https://reactstrap.github.io/components/pagination/" target="_blank">
+              <a
+                href="https://reactstrap.github.io/components/pagination/"
+                target="_blank"
+              >
                 <small className="text-muted">docs</small>
               </a>
             </div>
@@ -28,29 +33,19 @@ class Paginations extends Component {
                 <PaginationLink previous href="#" />
               </PaginationItem>
               <PaginationItem>
-                <PaginationLink href="#">
-                  1
-                </PaginationLink>
+                <PaginationLink href="#">1</PaginationLink>
               </PaginationItem>
               <PaginationItem>
-                <PaginationLink href="#">
-                  2
-                </PaginationLink>
+                <PaginationLink href="#">2</PaginationLink>
               </PaginationItem>
               <PaginationItem>
-                <PaginationLink href="#">
-                  3
-                </PaginationLink>
+                <PaginationLink href="#">3</PaginationLink>
               </PaginationItem>
               <PaginationItem>
-                <PaginationLink href="#">
-                  4
-                </PaginationLink>
+                <PaginationLink href="#">4</PaginationLink>
               </PaginationItem>
               <PaginationItem>
-                <PaginationLink href="#">
-                  5
-                </PaginationLink>
+                <PaginationLink href="#">5</PaginationLink>
               </PaginationItem>
               <PaginationItem>
                 <PaginationLink next href="#" />
@@ -60,7 +55,9 @@ class Paginations extends Component {
         </Card>
         <Card>
           <CardHeader>
-            <i className="fa fa-align-justify"></i><strong>Pagination</strong><small> disabled and active states</small>
+            <i className="fa fa-align-justify" />
+            <strong>Pagination</strong>
+            <small> disabled and active states</small>
           </CardHeader>
           <CardBody>
             <Pagination>
@@ -68,29 +65,19 @@ class Paginations extends Component {
                 <PaginationLink previous href="#" />
               </PaginationItem>
               <PaginationItem active>
-                <PaginationLink href="#">
-                  1
-                </PaginationLink>
+                <PaginationLink href="#">1</PaginationLink>
               </PaginationItem>
               <PaginationItem>
-                <PaginationLink href="#">
-                  2
-                </PaginationLink>
+                <PaginationLink href="#">2</PaginationLink>
               </PaginationItem>
               <PaginationItem>
-                <PaginationLink href="#">
-                  3
-                </PaginationLink>
+                <PaginationLink href="#">3</PaginationLink>
               </PaginationItem>
               <PaginationItem>
-                <PaginationLink href="#">
-                  4
-                </PaginationLink>
+                <PaginationLink href="#">4</PaginationLink>
               </PaginationItem>
               <PaginationItem>
-                <PaginationLink href="#">
-                  5
-                </PaginationLink>
+                <PaginationLink href="#">5</PaginationLink>
               </PaginationItem>
               <PaginationItem>
                 <PaginationLink next href="#" />
@@ -100,7 +87,9 @@ class Paginations extends Component {
         </Card>
         <Card>
           <CardHeader>
-            <i className="fa fa-align-justify"></i><strong>Pagination</strong><small> sizing</small>
+            <i className="fa fa-align-justify" />
+            <strong>Pagination</strong>
+            <small> sizing</small>
           </CardHeader>
           <CardBody>
             <Pagination size="lg">
@@ -108,19 +97,13 @@ class Paginations extends Component {
                 <PaginationLink previous href="#" />
               </PaginationItem>
               <PaginationItem>
-                <PaginationLink href="#">
-                  1
-                </PaginationLink>
+                <PaginationLink href="#">1</PaginationLink>
               </PaginationItem>
               <PaginationItem>
-                <PaginationLink href="#">
-                  2
-                </PaginationLink>
+                <PaginationLink href="#">2</PaginationLink>
               </PaginationItem>
               <PaginationItem>
-                <PaginationLink href="#">
-                  3
-                </PaginationLink>
+                <PaginationLink href="#">3</PaginationLink>
               </PaginationItem>
               <PaginationItem className="d-none d-sm-block">
                 <PaginationLink next href="#" />
@@ -131,19 +114,13 @@ class Paginations extends Component {
                 <PaginationLink previous href="#" />
               </PaginationItem>
               <PaginationItem>
-                <PaginationLink href="#">
-                  1
-                </PaginationLink>
+                <PaginationLink href="#">1</PaginationLink>
               </PaginationItem>
               <PaginationItem>
-                <PaginationLink href="#">
-                  2
-                </PaginationLink>
+                <PaginationLink href="#">2</PaginationLink>
               </PaginationItem>
               <PaginationItem>
-                <PaginationLink href="#">
-                  3
-                </PaginationLink>
+                <PaginationLink href="#">3</PaginationLink>
               </PaginationItem>
               <PaginationItem>
                 <PaginationLink next href="#" />
@@ -154,19 +131,13 @@ class Paginations extends Component {
                 <PaginationLink previous href="#" />
               </PaginationItem>
               <PaginationItem>
-                <PaginationLink href="#">
-                  1
-                </PaginationLink>
+                <PaginationLink href="#">1</PaginationLink>
               </PaginationItem>
               <PaginationItem>
-                <PaginationLink href="#">
-                  2
-                </PaginationLink>
+                <PaginationLink href="#">2</PaginationLink>
               </PaginationItem>
               <PaginationItem>
-                <PaginationLink href="#">
-                  3
-                </PaginationLink>
+                <PaginationLink href="#">3</PaginationLink>
               </PaginationItem>
               <PaginationItem>
                 <PaginationLink next href="#" />
