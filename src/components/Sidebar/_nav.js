@@ -14,7 +14,7 @@ export default {
 		{
 			name: 'Produtos',
 			url: '/produtos',
-			icon: 'fa fa-user',
+			icon: 'fa fa-retweet',
 			children: [
 				{
 					name: 'Adicionar',
@@ -25,7 +25,7 @@ export default {
 		{
 			name: 'Vendas',
 			url: '/vendas',
-			icon: 'fa fa-user',
+			icon: 'fa fa-shopping-cart',
 			children: [
 				{
 					name: 'Adicionar',

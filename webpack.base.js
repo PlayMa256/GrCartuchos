@@ -4,21 +4,16 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 const BUILD_DIR = path.resolve(__dirname, "build");
-const SRC_DIR = path.resolve(__dirname, "src");
 
 module.exports = {
   target: "web",
-  entry: {
-    index: [SRC_DIR + "/index.js"]
-  },
+  entry: "./src/index.js",
 
   output: {
     path: BUILD_DIR,
     filename: `[name].js`,
     publicPath: "/"
   },
-
-  devtool: "source-map",
 
   module: {
     rules: [
@@ -74,6 +69,10 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new CopyWebpackPlugin([{ from: "./public/img", to: "img" }], {
       copyUnmodified: false
-    })
+    }),
+    new HtmlWebpackPlugin({
+			inject: true,
+			template: "./public/index.html"
+		}),
   ]
 };

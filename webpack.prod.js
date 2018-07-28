@@ -26,10 +26,6 @@ const config = merge(base, {
 	},
 	plugins: [
 		new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /pt-br/),
-		new HtmlWebpackPlugin({
-			inject: true,
-			template: "./public/index.html"
-		}),
 		new webpack.NamedModulesPlugin(),
 		new MiniCssExtractPlugin()
 	],
