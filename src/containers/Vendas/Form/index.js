@@ -25,12 +25,9 @@ import {
 import "./styles.scss";
 
 export default class SalesForm extends React.PureComponent {
-  constructor(props) {
-    super(props);
-    this.state = {
-      numFields: 1
-    };
-  }
+  state = {
+    numFields: 1
+  };
 
   addMoreFields = () => {
     const { numFields } = this.state;
@@ -86,10 +83,8 @@ export default class SalesForm extends React.PureComponent {
               <Input type="text" name="valor" placeholder="Valor" />
             </FormGroup>
           </Col>
-          <Col xs="1">
-            <FormGroup>
-              <i className="fa fa-times" onClick={this.removeFields} />
-            </FormGroup>
+          <Col xs="1" className="vendas-form__close-button">
+            {i > 0 && <i className="fa fa-times" onClick={this.removeFields} />}
           </Col>
         </Row>
       );

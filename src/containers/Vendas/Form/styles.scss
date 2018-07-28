@@ -2,4 +2,11 @@
 	.addMore{
 		cursor: pointer;
 	}
+	&__close-button{
+		> i {
+			cursor: pointer;
+		}
+		display: inline-flex;
+		align-items: center;
+	}
 }
