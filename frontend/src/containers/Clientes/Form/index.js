@@ -49,6 +49,32 @@ export default function ClienteForm() {
                     />
                   </Col>
                 </FormGroup>
+                <FormGroup row>
+                  <Col md="3">
+                    <Label htmlFor="text-input">CNPJ</Label>
+                  </Col>
+                  <Col xs="12" md="9">
+                    <Input
+                      type="text"
+                      id="text-input"
+                      name="text-input"
+                      placeholder="CNPJ"
+                    />
+                  </Col>
+                </FormGroup>
+                <FormGroup row>
+                  <Col md="3">
+                    <Label htmlFor="text-input">IE</Label>
+                  </Col>
+                  <Col xs="12" md="9">
+                    <Input
+                      type="text"
+                      id="text-input"
+                      name="text-input"
+                      placeholder="Inscriçao estadual"
+                    />
+                  </Col>
+                </FormGroup>
               </Form>
             </CardBody>
             <CardFooter>
