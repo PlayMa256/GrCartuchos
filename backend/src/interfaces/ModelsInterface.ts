@@ -3,7 +3,7 @@ import { ProductModel } from "../models/ProductModel";
 import { SupplierModel } from "../models/SupplierModel";
 import { TransactionModel } from "../models/TransactionModel";
 import { MaintenanceModel } from "../models/MaintenaceModel";
-import { SellModel } from "../models/SellModel";
+import { SaleModel } from "../models/SaleModel";
 
 export interface ModelsInterface {
 	Client: ClientModel;
@@ -11,5 +11,5 @@ export interface ModelsInterface {
 	Supplier: SupplierModel;
 	Transaction: TransactionModel;
 	Maintenance: MaintenanceModel;
-	Sell: SellModel;
+	Sale: SaleModel;
 }

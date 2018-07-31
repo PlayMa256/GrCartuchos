@@ -1,7 +1,7 @@
 import * as Sequelize from "sequelize";
 
-export interface SellAttributes {
-	id?: number;
+export interface SaleAttributes {
+	id: number;
 	client: string;
 	product: string;
 	quantity: number;
@@ -11,17 +11,17 @@ export interface SellAttributes {
 	paymentDate?: string;
 }
 
-export interface SellInstance extends Sequelize.Instance<SellAttributes> {}
+export interface SaleInstance extends Sequelize.Instance<SaleAttributes> {}
 
-export interface SellModel
-	extends Sequelize.Model<SellInstance, SellAttributes> {}
+export interface SaleModel
+	extends Sequelize.Model<SaleInstance, SaleAttributes> {}
 
 export default (
 	sequelize: Sequelize.Sequelize,
 	DataTypes: Sequelize.DataTypes
-): SellModel => {
-	const Sell: SellModel = sequelize.define(
-		"Sell",
+): SaleModel => {
+	const Sale: SaleModel = sequelize.define(
+		"Sale",
 		{
 			id: {
 				type: DataTypes.INTEGER,
@@ -51,19 +51,19 @@ export default (
 			}
 		},
 		{
-			tableName: "sells"
+			tableName: "sales"
 		}
 	);
 
-	Sell.associate = (models): void => {
-		Sell.belongsTo(models.Client, {
+	Sale.associate = (models): void => {
+		Sale.belongsTo(models.Client, {
 			foreignKey: {
 				allowNull: false,
 				field: "client",
 				name: "client"
 			}
 		});
-		Sell.belongsTo(models.Product, {
+		Sale.belongsTo(models.Product, {
 			foreignKey: {
 				allowNull: false,
 				field: "product",
@@ -72,5 +72,5 @@ export default (
 		});
 	};
 
-	return Sell;
+	return Sale;
 };
