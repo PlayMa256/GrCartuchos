@@ -3,20 +3,14 @@ import { Query } from "./query";
 import { Mutation } from "./mutation";
 import { userTypes } from "./resources/user/user.schema";
 import { merge } from 'lodash';
-import { commentResolvers } from "./resources/comment/comment.resolvers";
-import { postResolvers } from "./resources/post/post.resolvers";
-import { userResolvers } from "./resources/user/user.resolvers";
-import { postTypes } from "./resources/post/post.schema";
-import { commentTypes } from "./resources/comment/comment.schema";
-import { tokenTypes } from "./resources/token/token.schema";
-import { tokenResolvers } from "./resources/token/token.resolvers";
+import { ClientType } from "./resources/client/client.schema";
+import { MaintenanceType } from "./resources/maintenance/maintenance.schema";
+import { ProductType } from "./resources/product/product.schema";
+import { SaleType } from "./resources/sale/sale.schema";
+import { SupplierType } from "./resources/supplier/supplier.model";
+import { TransactionType } from "./resources/transaction/transaction.schema";
 
-const resolvers = merge(
-  commentResolvers,
-  postResolvers,
-  userResolvers,
-  tokenResolvers
-)
+const resolvers = merge([]);
 
 const schemaDefinition = `
   type Schema{
@@ -30,10 +24,12 @@ export default makeExecutableSchema({
     schemaDefinition,
     Query,
     Mutation,
-    commentTypes,
-    postTypes,
-    userTypes,
-    tokenTypes
+    ClientType,
+    MaintenanceType,
+    ProductType,
+    SaleType,
+    SupplierType,
+    TransactionType
   ],
   resolvers
 });

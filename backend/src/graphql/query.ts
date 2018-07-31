@@ -1,11 +1,17 @@
-import { userQueries } from "./resources/user/user.schema";
-import { commentQueries } from "./resources/comment/comment.schema";
-import { postQueries } from "./resources/post/post.schema";
+import { clientQueries } from "./resources/client/client.schema";
+import { maintenanceQueries } from "./resources/maintenance/maintenance.schema";
+import { productQueries } from "./resources/product/product.schema";
+import { saleQueries } from "./resources/sale/sale.schema";
+import { supplierQueries } from "./resources/supplier/supplier.model";
+import { transactionQueries } from "./resources/transaction/transaction.schema";
 
 export const Query = `
 	type Query{
-		${userQueries}
-		${commentQueries}
-		${postQueries}
+		${clientQueries}
+		${maintenanceQueries}
+		${productQueries}
+		${saleQueries}
+		${supplierQueries}
+		${transactionQueries}
 	}
 `;

@@ -54,21 +54,6 @@
     "webpack-cli": "3.1.0",
     "webpack-serve": "^2.0.2"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{scss, js, md}": [
-      "prettier --write --single-quote=false",
-      "git add"
-    ],
-    "*.{js}": [
-      "npm run lint",
-      "git add"
-    ]
-  },
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server --progress --color --mode development --config ./webpack.dev.js",
     "build": "rm -rf build/ && cross-env NODE_ENV=production webpack --mode production --config ./webpack.prod.js",
