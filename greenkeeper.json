@@ -3,35 +3,7 @@
     "default": {
       "packages": [
         "backend/package.json",
-        "frontend/package.json",
-        "frontend/src/components/Aside/package.json",
-        "frontend/src/components/Breadcrumb/package.json",
-        "frontend/src/components/Footer/package.json",
-        "frontend/src/components/Header/package.json",
-        "frontend/src/components/SidebarFooter/package.json",
-        "frontend/src/components/SidebarForm/package.json",
-        "frontend/src/components/SidebarHeader/package.json",
-        "frontend/src/components/SidebarMinimizer/package.json",
-        "frontend/src/views/Base/Cards/package.json",
-        "frontend/src/views/Base/Paginations/package.json",
-        "frontend/src/views/Base/Popovers/package.json",
-        "frontend/src/views/Base/Switches/package.json",
-        "frontend/src/views/Base/Tables/package.json",
-        "frontend/src/views/Base/Tabs/package.json",
-        "frontend/src/views/Base/Tooltips/package.json",
-        "frontend/src/views/Buttons/ButtonDropdowns/package.json",
-        "frontend/src/views/Buttons/ButtonGroups/package.json",
-        "frontend/src/views/Buttons/Buttons/package.json",
-        "frontend/src/views/Buttons/SocialButtons/package.json",
-        "frontend/src/views/Charts/package.json",
-        "frontend/src/views/Dashboard/package.json",
-        "frontend/src/views/Notifications/Alerts/package.json",
-        "frontend/src/views/Notifications/Badges/package.json",
-        "frontend/src/views/Notifications/Modals/package.json",
-        "frontend/src/views/Pages/Page404/package.json",
-        "frontend/src/views/Pages/Page500/package.json",
-        "frontend/src/views/Pages/Register/package.json",
-        "frontend/src/views/Widgets/package.json"
+        "frontend/package.json"
       ]
     }
   }
