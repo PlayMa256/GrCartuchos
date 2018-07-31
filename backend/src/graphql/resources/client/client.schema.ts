@@ -8,8 +8,9 @@ export const ClientType = `
 `;
 
 export const clientQueries = `
-	clients(): [Client]
+	clients: [Client]
 	clientById(id: ID!): Client
+	clientByName(name: String): Client
 `;
 
 export const clientMutations = `

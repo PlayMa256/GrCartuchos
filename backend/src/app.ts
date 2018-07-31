@@ -19,12 +19,13 @@ class App {
 		this.express.use(
 			"/graphql",
 
-			(req: AppRequest, res, next) => {
-				req.context.db = db;
+			(req, res, next) => {
+				req['context'] = {};
+				req['context'].db = db;
 				next();
 			},
 
-			graphqlHttp((req: AppRequest) => ({
+			graphqlHttp((req) => ({
 				context: req.context,
 				graphiql: true,
 				schema
