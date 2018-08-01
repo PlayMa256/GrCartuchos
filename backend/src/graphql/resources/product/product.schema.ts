@@ -5,7 +5,7 @@ export const ProductType = `
 		date: String
 	}
 
-	type ProductInput{
+	input ProductInput{
 		name: String!
 		date: String
 	}

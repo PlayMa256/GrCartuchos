@@ -8,10 +8,10 @@ export const MaintenanceType = `
 		comment: String
 	}
 
-	type MaintenanceInput{
-		client: Client
-		supplier: Supplier
-		product: Product
+	input MaintenanceInput{
+		client: ClientInput
+		supplier: SupplierInput
+		product: ProductInput
 		date: String
 		comment: String
 	}

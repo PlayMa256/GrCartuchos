@@ -5,8 +5,8 @@ export const TransactionType = `
 		value: Float!
 		date: String
 	}
-	type TransactionInput{
-		client: Client!
+	input TransactionInput{
+		client: ClientInput!
 		value: Float!
 		date: String
 	}

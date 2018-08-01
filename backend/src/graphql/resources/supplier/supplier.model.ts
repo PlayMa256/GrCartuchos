@@ -3,6 +3,10 @@ export const SupplierType = `
 		id: ID!
 		name: String!
 	}
+	
+	input SupplierInput {
+		name: String!
+	}
 `;
 
 export const supplierQueries = `

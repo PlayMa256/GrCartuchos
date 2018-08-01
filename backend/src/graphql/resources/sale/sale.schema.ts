@@ -10,9 +10,9 @@ export const SaleType = `
 		paymentDate: String
 	}
 
-	type SaleInput{
-		client: Client!
-		product: Product!
+	input SaleInput{
+		client: ClientInput!
+		product: ProductInput!
 		quantity: Int!
 		price: String!
 		date: String

@@ -5,6 +5,11 @@ export const ClientType = `
 		cnpj: String
 		ie: String
 	}
+	input ClientInput {
+		name: String!
+		cnpj: String
+		ie: String
+	}
 `;
 
 export const clientQueries = `
