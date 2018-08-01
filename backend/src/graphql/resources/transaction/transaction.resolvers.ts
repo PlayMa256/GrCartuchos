@@ -1,7 +1,13 @@
 import { GraphqlContext } from "../../../types";
 import { GraphQLResolveInfo } from "graphql";
+import { handleError } from "../../../utils/utils";
 
 export const transactionResolvers = {
+	Transaction: {
+		client: (transaction, args, { db }: GraphqlContext, info: GraphQLResolveInfo) => {
+			return db.Client.findById(transaction.get('client')).catch(handleError);
+		}
+	},
 	Query: {
 		transactions: (parent, { id }, { db }: GraphqlContext, info: GraphQLResolveInfo) => {
 			return db.Transaction.findAll()

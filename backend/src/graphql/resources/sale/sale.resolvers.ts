@@ -1,7 +1,16 @@
 import { GraphqlContext } from "../../../types";
 import { GraphQLResolveInfo } from "graphql";
+import { handleError } from "../../../utils/utils";
 
 export const saleResolvers = {
+	Sale: {
+		client: (sale, args, { db }: GraphqlContext, info: GraphQLResolveInfo) => {
+			return db.Client.findById(sale.get('client')).catch(handleError);
+		},
+		product: (sale, args, { db }: GraphqlContext, info: GraphQLResolveInfo) => {
+			return db.Product.findById(sale.get('product')).catch(handleError);
+		}
+	},
 	Query: {
 		sales: (parent, input, { db }: GraphqlContext, info: GraphQLResolveInfo) => {
 			return db.Sale.findAll()

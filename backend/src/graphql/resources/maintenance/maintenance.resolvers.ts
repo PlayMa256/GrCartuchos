@@ -1,7 +1,19 @@
 import { GraphQLResolveInfo } from "graphql";
 import { GraphqlContext } from "../../../types";
+import { handleError } from "../../../utils/utils";
 
 export const maintenanceResolvers = {
+	Maintenance: {
+		client: (maintenance, args, { db }: GraphqlContext, info: GraphQLResolveInfo) => {
+			return db.Client.findById(maintenance.get('client')).catch(handleError);
+		},
+		supplier: (maintenance, args, { db }: GraphqlContext, info: GraphQLResolveInfo) => {
+			return db.Supplier.findById(maintenance.get('supplier')).catch(handleError);
+		},
+		product: (maintenance, args, { db }: GraphqlContext, info: GraphQLResolveInfo) => {
+			return db.Product.findById(maintenance.get('product')).catch(handleError);
+		}
+	},
 	Query: {
 		maintenances: (parent, args, { db }: GraphqlContext, info: GraphQLResolveInfo) => { 
 			return db.Maintenance.findAll()
