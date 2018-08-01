@@ -3,26 +3,26 @@ export const SaleType = `
 		id: ID!
 		client: Client!
 		product: Product!
-		quantity: number!
-		price: string!
-		date: string
-		status: string
-		paymentDate: string
+		quantity: Int!
+		price: String!
+		date: String
+		status: String
+		paymentDate: String
 	}
 
 	type SaleInput{
 		client: Client!
 		product: Product!
-		quantity: number!
-		price: string!
-		date: string
-		status: string
-		paymentDate: string
+		quantity: Int!
+		price: String!
+		date: String
+		status: String
+		paymentDate: String
 	}
 `;
 
 export const saleQueries = `
-	sales(): [Sell]
+	sales: [Sale]
 	saleyId(id: ID!): Sale
 	saleByClientId(id: ID!): Sale
 	saleByProductId(id: ID!): Sale

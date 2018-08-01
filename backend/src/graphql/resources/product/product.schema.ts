@@ -12,7 +12,7 @@ export const ProductType = `
 `;
 
 export const productQueries = `
-	products(): [Product]
+	products: [Product]
 	productById(id: ID!): Product
 `;
 

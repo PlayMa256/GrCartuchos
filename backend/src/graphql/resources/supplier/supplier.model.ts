@@ -6,7 +6,7 @@ export const SupplierType = `
 `;
 
 export const supplierQueries = `
-	suppliers(): [Supplier]
+	suppliers: [Supplier]
 	supplierById(id: ID!): Supplier
 	SupplierByName(name: String!): Supplier
 `;

@@ -25,7 +25,7 @@ class App {
 				next();
 			},
 
-			graphqlHttp((req) => ({
+			graphqlHttp((req: AppRequest) => ({
 				context: req.context,
 				graphiql: true,
 				schema

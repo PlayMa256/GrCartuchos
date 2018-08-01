@@ -1,24 +1,24 @@
 export const MaintenanceType = `
 	type Maintenance{
 		id: ID!
-		client: Client;
-		supplier: Supplier;
-		product: Product;
-		date: string;
-		comment: string;
+		client: Client
+		supplier: Supplier
+		product: Product
+		date: String
+		comment: String
 	}
 
 	type MaintenanceInput{
-		client: Client;
-		supplier: Supplier;
-		product: Product;
-		date: string;
-		comment: string;
+		client: Client
+		supplier: Supplier
+		product: Product
+		date: String
+		comment: String
 	}
 `;
 
 export const maintenanceQueries = `
-	maintenances(): [Maintenance]
+	maintenances: [Maintenance]
 	maintenanceById(id: ID!): Maintenance
 	maintenancePerClientId(client: ID!): Maintenance
 	maintenancePerSupplier(supplier: ID!): Maintenance

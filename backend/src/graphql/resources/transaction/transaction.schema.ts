@@ -13,7 +13,7 @@ export const TransactionType = `
 `;
 
 export const transactionQueries = `
-	transactions(): [Transaction]
+	transactions: [Transaction]
 	transactionById(id: ID!): Transaction
 	transactionByClient(client: ID!): Transaction
 `;
