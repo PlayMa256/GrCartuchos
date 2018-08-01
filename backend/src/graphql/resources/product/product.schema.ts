@@ -17,7 +17,7 @@ export const productQueries = `
 `;
 
 export const productMutations = `
-	createProduct(input: ProductInput): Product
-	updateProduct(input: ProductInput): Product
+	createProduct(input: ProductInput!): Product
+	updateProduct(input: ProductInput!, id: ID!): Product
 	deleteProduct(id: ID!): Boolean
 `;

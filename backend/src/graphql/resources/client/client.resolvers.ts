@@ -39,6 +39,33 @@ export const clientResolver = {
 			}).catch((error) => {
 				throw new Error(error);
 			})
+		},
+		updateClient: (parent, {input, id}, { db }: GraphqlContext, info: GraphQLResolveInfo) => {
+			return db.sequelize.transaction((t) => {
+				return db.Client.findById(id)
+					.then((client) => {
+						if (!client) {
+							throw new Error(`Could not find client ${db}`);
+						}
+						return client.update(input, {
+							transaction: t
+						});
+					})
+			});
+		},
+
+		deleteClient: (parent, {id}, { db }: GraphqlContext, info: GraphQLResolveInfo) => {
+			return db.sequelize.transaction((t) => {
+				return db.Client.findById(id)
+					.then((client) => {
+						if (!client) {
+							throw new Error(`Could not find client ${db}`);
+						}
+						return client.destroy({
+							transaction: t
+						});
+					})
+			});
 		}
 	}
 }

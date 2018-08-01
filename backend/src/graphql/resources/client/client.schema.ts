@@ -20,6 +20,6 @@ export const clientQueries = `
 
 export const clientMutations = `
 	createClient(name: String!, cnpj: String, ie: String): Client
-	updateClient(name: String, cnpj: String, ie: String): Client
+	updateClient(input: ClientInput, id: ID): Client
 	deleteClient(id: ID!): Boolean
 `;

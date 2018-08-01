@@ -9,6 +9,7 @@ const port = normalizePort(process.env.port || 3000);
 server.listen(port, () => {
 	console.log('server listening to port', port);
 });
+
 db.sequelize.sync().then(() => {
 	server.on("error", onError(server));
 	server.on("listening", onListening(server));

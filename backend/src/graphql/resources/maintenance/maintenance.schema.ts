@@ -27,6 +27,6 @@ export const maintenanceQueries = `
 
 export const maintenanceMutations = `
 	createMaintenance(input: MaintenanceInput): Maintenance
-	updateMaitenance(input: MaintenanceInput): Maintenance
+	updateMaintenance(input: MaintenanceInput, id: ID!): Maintenance
 	deleteMaintenance(id: ID!): Boolean
 `;
