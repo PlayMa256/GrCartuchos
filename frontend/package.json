@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "license": "MIT",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-core": "6.26.3",
     "babel-eslint": "8.2.6",
     "babel-loader": "7.1.5",
@@ -10,6 +11,7 @@
     "babel-plugin-transform-class-properties": "6.24.1",
     "babel-plugin-transform-object-rest-spread": "6.26.0",
     "babel-preset-env": "1.7.0",
+    "babel-preset-flow": "^6.23.0",
     "babel-preset-react": "6.24.1",
     "copy-webpack-plugin": "4.5.2",
     "cross-env": "5.2.0",
@@ -20,6 +22,7 @@
     "eslint-plugin-prettier": "^2.6.2",
     "eslint-plugin-react": "7.10.0",
     "file-loader": "1.1.11",
+    "flow-bin": "^0.77.0",
     "html-loader": "0.5.5",
     "html-webpack-plugin": "3.2.0",
     "husky": "^1.0.0-rc.13",
@@ -57,6 +60,7 @@
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server --progress --color --mode development --config ./webpack.dev.js",
     "build": "rm -rf build/ && cross-env NODE_ENV=production webpack --mode production --config ./webpack.prod.js",
-    "lint": "eslint src/*"
+    "lint": "eslint src/*",
+    "flow": "flow status"
   }
 }

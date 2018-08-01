@@ -16,7 +16,8 @@
         "modules": false,
         "useBuiltIns": true
       }
-    ]
+    ],
+    "flow"
   ],
   "plugins": [
     "transform-object-rest-spread",
