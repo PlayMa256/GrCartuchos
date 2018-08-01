@@ -1,0 +1,110 @@
+type Client {
+  id: ID!
+  name: String!
+  cnpj: String
+  ie: String
+}
+input ClientInput {
+  name: String!
+  cnpj: String
+  ie: String
+}
+
+type Maintenance {
+  id: ID!
+  client: Client
+  supplier: Supplier
+  product: Product
+  date: String
+  comment: String
+}
+
+input MaintenanceInput {
+  client: ClientInput
+  supplier: SupplierInput
+  product: ProductInput
+  date: String
+  comment: String
+}
+
+type Product {
+  id: ID!
+  name: String!
+  date: String
+}
+
+input ProductInput {
+  name: String!
+  date: String
+}
+
+type Sale {
+  id: ID!
+  client: Client!
+  product: Product!
+  quantity: Int!
+  price: String!
+  date: String
+  status: String
+  paymentDate: String
+}
+
+input SaleInput {
+  client: ClientInput!
+  product: ProductInput!
+  quantity: Int!
+  price: String!
+  date: String
+  status: String
+  paymentDate: String
+}
+
+type Supplier {
+  id: ID!
+  name: String!
+}
+
+input SupplierInput {
+  name: String!
+}
+
+type Transaction {
+  id: ID!
+  client: Client!
+  value: Float!
+  date: String
+}
+
+input TransactionInput {
+  client: ClientInput!
+  value: Float!
+  date: String
+}
+
+type Query {
+  clients: [Client]
+  clientById(id: ID!): Client
+  clientByName(name: String): Client
+
+  maintenances: [Maintenance]
+  maintenanceById(id: ID!): Maintenance
+  maintenancePerClientId(client: ID!): Maintenance
+  maintenancePerSupplier(supplier: ID!): Maintenance
+  maintenancePerProduct(product: ID!): Maintenance
+
+  products: [Product]
+  productById(id: ID!): Product
+
+  sales: [Sale]
+  saleyId(id: ID!): Sale
+  saleByClientId(id: ID!): Sale
+  saleByProductId(id: ID!): Sale
+
+  suppliers: [Supplier]
+  supplierById(id: ID!): Supplier
+  SupplierByName(name: String!): Supplier
+
+  transactions: [Transaction]
+  transactionById(id: ID!): Transaction
+  transactionByClient(client: ID!): Transaction
+}

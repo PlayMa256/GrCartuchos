@@ -6,7 +6,7 @@ import { ClientType } from "./resources/client/client.schema";
 import { MaintenanceType } from "./resources/maintenance/maintenance.schema";
 import { ProductType } from "./resources/product/product.schema";
 import { SaleType } from "./resources/sale/sale.schema";
-import { SupplierType } from "./resources/supplier/supplier.model";
+import { SupplierType } from "./resources/supplier/supplier.schema";
 import { TransactionType } from "./resources/transaction/transaction.schema";
 import { clientResolver } from "./resources/client/client.resolvers";
 
