@@ -6,6 +6,10 @@ export default {
       icon: "fa fa-user",
       children: [
         {
+          name: "Lista",
+          url: "/clientes/list"
+        },
+        {
           name: "Adicionar",
           url: "/clientes/add"
         }

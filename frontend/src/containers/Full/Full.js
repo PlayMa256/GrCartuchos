@@ -8,9 +8,9 @@ import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
 import Aside from "../../components/Aside/Aside";
 import Footer from "../../components/Footer/Footer";
 
-import Clientes from "../Clientes/index";
-import Produtos from "../Produtos/index";
-import Vendas from "../Vendas/index";
+import Clients from "../Clients/index";
+import Products from "../Products/index";
+import Sales from "../Sales/index";
 
 import Dashboard from "../../views/Dashboard/";
 
@@ -47,9 +47,9 @@ class Full extends Component {
             <Breadcrumb />
             <Container fluid>
               <Switch>
-                <Route path="/clientes" name="Clientes" component={Clientes} />
-                <Route path="/produtos" name="Produtos" component={Produtos} />
-                <Route path="/vendas" name="Vendas" component={Vendas} />
+                <Route path="/clientes" name="Clients" component={Clients} />
+                <Route path="/produtos" name="Products" component={Products} />
+                <Route path="/vendas" name="Vendas" component={Sales} />
                 <Route
                   path="/dashboard"
                   name="Dashboard"
