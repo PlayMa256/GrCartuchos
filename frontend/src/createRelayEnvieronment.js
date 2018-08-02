@@ -8,19 +8,19 @@ import { Environment, Network, RecordSource, Store } from "relay-runtime";
 const devUrl = "http://localhost:3000/graphql";
 
 const fetchQuery = async (operation, variables) => {
-	return fetch(devUrl, {
-		method: "POST",
-		headers: {
-			Accept: "application/json",
-			"Content-Type": "application/json"
-		},
-		body: JSON.stringify({
-			query: operation.text, // GraphQL text from input
-			variables
-		})
-	}).then(response => {
-		return response.json();
-	});
+  return fetch(devUrl, {
+    method: "POST",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      query: operation.text, // GraphQL text from input
+      variables
+    })
+  }).then(response => {
+    return response.json();
+  });
 };
 
 // Create a network layer from the fetch function
@@ -30,8 +30,8 @@ const source = new RecordSource();
 const store = new Store(source);
 
 const env = new Environment({
-	network,
-	store
+  network,
+  store
 });
 
 export default env;

@@ -25,11 +25,11 @@
   },
   "lint-staged": {
     "*.{ts}": [
-      "prettier --parser typescript --write --single-quote=false --use-tabs --tab-width 2",
+      "prettier --parser typescript --write --single-quote=false --use-tabs=false",
       "git add"
     ],
     "*.{scss,js,md}": [
-      "prettier --write --single-quote=false --use-tabs --tab-width 2",
+      "prettier --write --single-quote=false --use-tabs=false",
       "git add"
     ],
     "*.{js}": [
