@@ -9,9 +9,11 @@ import { SaleType } from "./resources/sale/sale.schema";
 import { SupplierType } from "./resources/supplier/supplier.schema";
 import { TransactionType } from "./resources/transaction/transaction.schema";
 import { clientResolver } from "./resources/client/client.resolvers";
+import { productResolvers } from "./resources/product/product.resolvers";
 
 const resolvers = merge(
-  clientResolver
+  clientResolver,
+  productResolvers
 );
 
 const schemaDefinition = `

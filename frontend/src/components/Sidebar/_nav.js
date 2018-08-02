@@ -21,6 +21,10 @@ export default {
       icon: "fa fa-retweet",
       children: [
         {
+          name: "Lista",
+          url: "/produtos/list"
+        },
+        {
           name: "Adicionar",
           url: "/produtos/add"
         }

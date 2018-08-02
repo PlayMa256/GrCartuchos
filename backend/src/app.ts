@@ -2,6 +2,7 @@ import * as express from "express";
 import * as graphqlHttp from "express-graphql";
 import schema from "./graphql/schema";
 import db from "./models";
+import * as cors from 'cors';
 
 export interface AppRequest extends express.Request{
 	context?: any
@@ -18,13 +19,12 @@ class App {
 	private middleware(): void {
 		this.express.use(
 			"/graphql",
-
 			(req, res, next) => {
 				req['context'] = {};
 				req['context'].db = db;
 				next();
 			},
-
+			cors(),
 			graphqlHttp((req: AppRequest) => ({
 				context: req.context,
 				graphiql: true,

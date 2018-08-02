@@ -15,14 +15,13 @@ import { graphql, QueryRenderer } from "react-relay";
 import modernEnvironment from "../../createRelayEnvieronment";
 import { notAvailable } from "../../utils";
 
-class ClientList extends React.PureComponent {
-  renderRows = clients => {
-    return (clients || []).map(client => {
+class ProductList extends React.PureComponent {
+  renderRows = products => {
+    return (products || []).map(product => {
       return (
-        <tr key={client.name}>
-          <td>{client.name}</td>
-          <td>{notAvailable(client.cpnj)}</td>
-          <td>{notAvailable(client.ie)}</td>
+        <tr key={product.name}>
+          <td>{product.name}</td>
+          <td>{notAvailable(product.date)}</td>
         </tr>
       );
     });
@@ -33,28 +32,26 @@ class ClientList extends React.PureComponent {
       <QueryRenderer
         environment={modernEnvironment}
         query={graphql`
-          query ClientListQuery {
-            clients {
+          query ProductListQuery {
+            products {
               name
-              cnpj
-              ie
+              date
             }
           }
         `}
         variables={{}}
         render={({ error, props }) => {
-          const clients = props ? props.clients : [];
-          const rows = this.renderRows(clients);
+          const products = props ? props.products : [];
+          const rows = this.renderRows(products);
           return (
             <Card>
-              <CardHeader>Lista de Clientes</CardHeader>
+              <CardHeader>Lista de Produtos</CardHeader>
               <CardBody>
                 <Table responsive bordered>
                   <thead>
                     <tr>
                       <th>Nome</th>
                       <th>CNPJ</th>
-                      <th>IE</th>
                     </tr>
                   </thead>
                   <tbody>{rows}</tbody>
@@ -68,4 +65,4 @@ class ClientList extends React.PureComponent {
   }
 }
 
-export default ClientList;
+export default ProductList;

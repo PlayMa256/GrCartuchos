@@ -24,7 +24,7 @@ export const productResolvers = {
 		}
 	},
 	Mutation: {
-		createProduct: (parent, { input }, { db }: GraphqlContext, info: GraphQLResolveInfo) => {
+		createProduct: (parent, {input}, { db }: GraphqlContext, info: GraphQLResolveInfo) => {
 			return db.sequelize.transaction((t) => {
 				return db.Product.create(input, {
 					transaction: t

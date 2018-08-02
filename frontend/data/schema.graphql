@@ -107,8 +107,4 @@ type Query {
   transactions: [Transaction]
   transactionById(id: ID!): Transaction
   transactionByClient(client: ID!): Transaction
-
-  node(
-    id: ID!
-  ): Node
 }
