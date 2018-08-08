@@ -1,6 +1,6 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
-import ClienteForm from "./Form/";
+import ClienteForm from "./ClientForm";
 import ClientList from "./ClientList";
 
 export default () => {

@@ -1,7 +1,13 @@
 import { GraphQLResolveInfo } from "graphql";
 import { GraphqlContext } from "../../../types";
+import * as crypto from 'crypto';
 
 export const clientResolver = {
+	Client: {
+		id: (parent, args, { db }: GraphqlContext, info: GraphQLResolveInfo) => { 
+			return Buffer.from('' + parent.get('id')).toString('base64');
+		}
+	},
 	Query: {
 		clients: (parent, args, {db}: GraphqlContext, info: GraphQLResolveInfo) => {
 			return db.Client.findAll()

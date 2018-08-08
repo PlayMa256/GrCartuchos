@@ -1,6 +1,6 @@
 /**
  * @flow
- * @relayHash 7f38a43a569033120d9635021c014d7c
+ * @relayHash 6c115c91f503bcc68009dab4f3723c72
  */
 
 /* eslint-disable */
@@ -12,8 +12,7 @@ import type { ConcreteRequest } from 'relay-runtime';
 export type ProductListQueryVariables = {||};
 export type ProductListQueryResponse = {|
   +products: ?$ReadOnlyArray<?{|
-    +name: string,
-    +date: ?string,
+    +name: string
   |}>
 |};
 export type ProductListQuery = {|
@@ -26,7 +25,6 @@ export type ProductListQuery = {|
 query ProductListQuery {
   products {
     name
-    date
     id
   }
 }
@@ -34,26 +32,18 @@ query ProductListQuery {
 
 const node /*: ConcreteRequest*/ = (function() {
   var v0 = {
-      kind: "ScalarField",
-      alias: null,
-      name: "name",
-      args: null,
-      storageKey: null
-    },
-    v1 = {
-      kind: "ScalarField",
-      alias: null,
-      name: "date",
-      args: null,
-      storageKey: null
-    };
+    kind: "ScalarField",
+    alias: null,
+    name: "name",
+    args: null,
+    storageKey: null
+  };
   return {
     kind: "Request",
     operationKind: "query",
     name: "ProductListQuery",
     id: null,
-    text:
-      "query ProductListQuery {\n  products {\n    name\n    date\n    id\n  }\n}\n",
+    text: "query ProductListQuery {\n  products {\n    name\n    id\n  }\n}\n",
     metadata: {},
     fragment: {
       kind: "Fragment",
@@ -70,7 +60,7 @@ const node /*: ConcreteRequest*/ = (function() {
           args: null,
           concreteType: "Product",
           plural: true,
-          selections: [v0, v1]
+          selections: [v0]
         }
       ]
     },
@@ -89,7 +79,6 @@ const node /*: ConcreteRequest*/ = (function() {
           plural: true,
           selections: [
             v0,
-            v1,
             {
               kind: "ScalarField",
               alias: null,
@@ -104,5 +93,5 @@ const node /*: ConcreteRequest*/ = (function() {
   };
 })();
 // prettier-ignore
-(node/*: any*/).hash = '060ce6b00cb7c052c407b4b642c4a05e';
+(node/*: any*/).hash = 'e1dbc0606014cccab8129261134ac9fa';
 module.exports = node;

@@ -4,6 +4,7 @@ import { productQueries } from "./resources/product/product.schema";
 import { saleQueries } from "./resources/sale/sale.schema";
 import { supplierQueries } from "./resources/supplier/supplier.schema";
 import { transactionQueries } from "./resources/transaction/transaction.schema";
+import { nodeQueries } from "./resources/node/node.schema";
 
 export const Query = `
 	type Query{
@@ -13,5 +14,8 @@ export const Query = `
 		${saleQueries}
 		${supplierQueries}
 		${transactionQueries}
+		${nodeQueries}
 	}
 `;
+
+console.log(Query);

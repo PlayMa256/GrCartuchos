@@ -1,6 +1,6 @@
 /**
  * @flow
- * @relayHash b498853bf0f59af3c97416a142d49de6
+ * @relayHash fb48044047f9c40c2944eadff664837c
  */
 
 /* eslint-disable */
@@ -12,6 +12,7 @@ import type { ConcreteRequest } from 'relay-runtime';
 export type ClientListQueryVariables = {||};
 export type ClientListQueryResponse = {|
   +clients: ?$ReadOnlyArray<?{|
+    +id: string,
     +name: string,
     +cnpj: ?string,
     +ie: ?string,
@@ -26,43 +27,63 @@ export type ClientListQuery = {|
 /*
 query ClientListQuery {
   clients {
+    id
     name
     cnpj
     ie
-    id
   }
 }
 */
 
 const node /*: ConcreteRequest*/ = (function() {
-  var v0 = {
-      kind: "ScalarField",
+  var v0 = [
+    {
+      kind: "LinkedField",
       alias: null,
-      name: "name",
+      name: "clients",
+      storageKey: null,
       args: null,
-      storageKey: null
-    },
-    v1 = {
-      kind: "ScalarField",
-      alias: null,
-      name: "cnpj",
-      args: null,
-      storageKey: null
-    },
-    v2 = {
-      kind: "ScalarField",
-      alias: null,
-      name: "ie",
-      args: null,
-      storageKey: null
-    };
+      concreteType: "Client",
+      plural: true,
+      selections: [
+        {
+          kind: "ScalarField",
+          alias: null,
+          name: "id",
+          args: null,
+          storageKey: null
+        },
+        {
+          kind: "ScalarField",
+          alias: null,
+          name: "name",
+          args: null,
+          storageKey: null
+        },
+        {
+          kind: "ScalarField",
+          alias: null,
+          name: "cnpj",
+          args: null,
+          storageKey: null
+        },
+        {
+          kind: "ScalarField",
+          alias: null,
+          name: "ie",
+          args: null,
+          storageKey: null
+        }
+      ]
+    }
+  ];
   return {
     kind: "Request",
     operationKind: "query",
     name: "ClientListQuery",
     id: null,
     text:
-      "query ClientListQuery {\n  clients {\n    name\n    cnpj\n    ie\n    id\n  }\n}\n",
+      "query ClientListQuery {\n  clients {\n    id\n    name\n    cnpj\n    ie\n  }\n}\n",
     metadata: {},
     fragment: {
       kind: "Fragment",
@@ -70,49 +91,16 @@ const node /*: ConcreteRequest*/ = (function() {
       type: "Query",
       metadata: null,
       argumentDefinitions: [],
-      selections: [
-        {
-          kind: "LinkedField",
-          alias: null,
-          name: "clients",
-          storageKey: null,
-          args: null,
-          concreteType: "Client",
-          plural: true,
-          selections: [v0, v1, v2]
-        }
-      ]
+      selections: v0
     },
     operation: {
       kind: "Operation",
       name: "ClientListQuery",
       argumentDefinitions: [],
-      selections: [
-        {
-          kind: "LinkedField",
-          alias: null,
-          name: "clients",
-          storageKey: null,
-          args: null,
-          concreteType: "Client",
-          plural: true,
-          selections: [
-            v0,
-            v1,
-            v2,
-            {
-              kind: "ScalarField",
-              alias: null,
-              name: "id",
-              args: null,
-              storageKey: null
-            }
-          ]
-        }
-      ]
+      selections: v0
     }
   };
 })();
 // prettier-ignore
-(node/*: any*/).hash = 'c4f08a3107ef5758663163156dfa03ea';
+(node/*: any*/).hash = 'cb38bcd5e661a4130f62bd8f2cdb6f66';
 module.exports = node;

@@ -10,6 +10,7 @@ import { SupplierType } from "./resources/supplier/supplier.schema";
 import { TransactionType } from "./resources/transaction/transaction.schema";
 import { clientResolver } from "./resources/client/client.resolvers";
 import { productResolvers } from "./resources/product/product.resolvers";
+import { NodeType } from "./resources/node/node.schema";
 
 const resolvers = merge(
   clientResolver,
@@ -33,7 +34,8 @@ export default makeExecutableSchema({
     ProductType,
     SaleType,
     SupplierType,
-    TransactionType
+    TransactionType,
+    NodeType
   ],
   resolvers
 });

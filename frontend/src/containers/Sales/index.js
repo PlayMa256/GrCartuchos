@@ -1,6 +1,6 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
-import SalesForm from "./Form/";
+import SalesForm from "./SalesForm/SalesForm";
 
 export default () => {
   return (

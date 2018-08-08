@@ -19,7 +19,7 @@ class ClientList extends React.PureComponent {
   renderRows = clients => {
     return (clients || []).map(client => {
       return (
-        <tr key={client.name}>
+        <tr key={client.id}>
           <td>{client.name}</td>
           <td>{notAvailable(client.cpnj)}</td>
           <td>{notAvailable(client.ie)}</td>
@@ -35,6 +35,7 @@ class ClientList extends React.PureComponent {
         query={graphql`
           query ClientListQuery {
             clients {
+              id
               name
               cnpj
               ie

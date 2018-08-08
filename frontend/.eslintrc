@@ -6,7 +6,8 @@
   ],
   "plugins": [
     "react",
-    "prettier"
+    "prettier",
+    "import"
   ],
   "parserOptions": {
     "ecmaFeatures": {
@@ -19,6 +20,14 @@
     "react/prop-types": "off",
     "react/jsx-no-target-blank": "off",
     "react/display-name": "off",
-    "react/jsx-no-duplicate-props": "off"
+    "react/jsx-no-duplicate-props": "off",
+		"import/no-unresolved": "error",
+		"import/newline-after-import": "error",
+		"import/order": [
+			"error",
+			{
+				"groups": [ [ "builtin", "internal", "external" ], [ "sibling", "parent" ], "index" ]
+			}
+		]
   }
 }

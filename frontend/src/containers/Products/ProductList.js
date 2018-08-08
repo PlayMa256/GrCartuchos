@@ -21,7 +21,6 @@ class ProductList extends React.PureComponent {
       return (
         <tr key={product.name}>
           <td>{product.name}</td>
-          <td>{notAvailable(product.date)}</td>
         </tr>
       );
     });
@@ -35,7 +34,6 @@ class ProductList extends React.PureComponent {
           query ProductListQuery {
             products {
               name
-              date
             }
           }
         `}
@@ -51,7 +49,6 @@ class ProductList extends React.PureComponent {
                   <thead>
                     <tr>
                       <th>Nome</th>
-                      <th>CNPJ</th>
                     </tr>
                   </thead>
                   <tbody>{rows}</tbody>

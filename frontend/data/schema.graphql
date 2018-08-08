@@ -1,3 +1,7 @@
+interface Node {
+  id: ID!
+}
+
 type Client {
   id: ID!
   name: String!
@@ -107,4 +111,29 @@ type Query {
   transactions: [Transaction]
   transactionById(id: ID!): Transaction
   transactionByClient(client: ID!): Transaction
+  node(id: ID!): Node
+}
+
+type Mutation {
+  createClient(name: String!, cnpj: String, ie: String): Client
+  updateClient(input: ClientInput, id: ID): Client
+  deleteClient(id: ID!): Boolean
+
+  createMaintenance(input: MaintenanceInput): Maintenance
+  updateMaintenance(input: MaintenanceInput, id: ID!): Maintenance
+  deleteMaintenance(id: ID!): Boolean
+
+  createProduct(input: ProductInput!): Product
+  updateProduct(input: ProductInput!, id: ID!): Product
+  deleteProduct(id: ID!): Boolean
+
+  createSale(input: SaleInput): Sale
+  deleteSale(id: ID!): Boolean
+
+  createSupplier(name: String!): Supplier
+  deleteSupplier(id: ID!): Boolean
+
+  createTransaction(input: TransactionInput): Transaction
+  updateTransaction(input: TransactionInput): Transaction
+  deleteTransaction(id: ID!): Boolean
 }
