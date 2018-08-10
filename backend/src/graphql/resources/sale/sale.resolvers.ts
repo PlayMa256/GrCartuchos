@@ -62,17 +62,39 @@ export const saleResolvers = {
 	},
 	Mutation: {
 		createSale: (parent, { input }, { db }: GraphqlContext, info: GraphQLResolveInfo) => {
-			return db.sequelize.transaction((t) => {
-				return db.Sale.create(input, {
-					transaction: t
+			const sales = input.items;
+			const results = []
+			const client = Buffer.from(input.client, 'base64').toString('ascii').replace('Client', '');
+			const salesCreation = sales.map((sale) => {
+				return db.sequelize.transaction((t) => {
+					const product = Buffer.from(input.client, 'base64').toString('ascii').replace('Product', '');
+					return db.Sale.create({
+						client: parseInt(client),
+						product: parseInt(10, product),
+						quantity: sale.quantity,
+						price: sale.price,
+						date: input.date,
+						status: "NOT PAID"
+					}, {
+							transaction: t
+						})
+						.then((sale) => {
+							results.push(sale)
+						})
+						.catch((err) => {
+							throw new Error(err)
+						});
 				})
-					.then((sale) => {
-						return sale;
-					})
-					.catch((err) => {
-						throw new Error(err)
-					});
+			});
+
+			return Promise.all(salesCreation)
+				.then(() => {
+					return Promise.resolve(results);
+				})
+				.catch((err) => {
+					throw new Error(err)
 			})
+			
 		},
 		deleteSale: (parent, { id }, { db }: GraphqlContext, info: GraphQLResolveInfo) => {
 			return db.sequelize.transaction((t) => {

@@ -4,7 +4,7 @@ import { GraphQLResolveInfo } from "graphql";
 export const productResolvers = {
 	Product: {
 		id: (parent, args, { db }: GraphqlContext, info: GraphQLResolveInfo) => { 
-			return Buffer.from('' + parent.get('id')).toString('base64');
+			return Buffer.from('' + parent.get('id') + 'Product').toString('base64');
 		}
 	},
 	Query: {

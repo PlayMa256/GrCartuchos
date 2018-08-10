@@ -11,13 +11,17 @@ export const SaleType = `
 	}
 
 	input SaleInput{
-		client: ClientInput!
-		product: ProductInput!
-		quantity: Int!
-		price: String!
+		client: String!
+		items: [SaleProductInput]!
 		date: String
 		status: String
 		paymentDate: String
+	}
+
+	input SaleProductInput {
+		product: ProductInput!
+		quantity: Int!
+		price: String!
 	}
 `;
 

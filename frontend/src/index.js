@@ -1,6 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import moment from "moment";
 import { HashRouter, Route, Switch } from "react-router-dom";
+
+moment.locale("pt-BR");
 
 // Import Font Awesome Icons Set
 import "font-awesome/css/font-awesome.min.css";

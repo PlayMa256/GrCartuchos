@@ -53,15 +53,20 @@ type Sale {
   paymentDate: String
 }
 
-input SaleInput {
-  client: ClientInput!
+input SaleProductInput {
   product: ProductInput!
   quantity: Int!
   price: String!
+}
+
+input SaleInput {
+  client: String!
+  items: [SaleProductInput]!
   date: String
   status: String
   paymentDate: String
 }
+
 
 type Supplier {
   id: ID!
