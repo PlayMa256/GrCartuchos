@@ -56,13 +56,13 @@
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/@types/geojson/-/geojson-1.0.6.tgz#3e02972728c69248c2af08d60a48cbb8680fffdf"
 
-"@types/graphql@*", "@types/graphql@0.13.3":
+"@types/graphql@*":
   version "0.13.3"
   resolved "https://registry.yarnpkg.com/@types/graphql/-/graphql-0.13.3.tgz#23af65796d341f93ef5b485138bd52c67786452d"
 
-"@types/graphql@0.12.6":
-  version "0.12.6"
-  resolved "https://registry.yarnpkg.com/@types/graphql/-/graphql-0.12.6.tgz#3d619198585fcabe5f4e1adfb5cf5f3388c66c13"
+"@types/graphql@14.0.1":
+  version "14.0.1"
+  resolved "http://localhost:4873/@types%2fgraphql/-/graphql-14.0.1.tgz#ff44c20fefdf0cf8c390f64b0dfbbc3c10dbaa87"
 
 "@types/jsonwebtoken@7.2.8":
   version "7.2.8"
@@ -78,17 +78,21 @@
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@types/mime/-/mime-2.0.0.tgz#5a7306e367c539b9f6543499de8dd519fac37a8b"
 
-"@types/node@*", "@types/node@10.5.4":
+"@types/node@*":
   version "10.5.4"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-10.5.4.tgz#6eccc158504357d1da91434d75e86acde94bb10b"
+
+"@types/node@10.11.4":
+  version "10.11.4"
+  resolved "http://localhost:4873/@types%2fnode/-/node-10.11.4.tgz#e8bd933c3f78795d580ae41d86590bfc1f4f389d"
 
 "@types/range-parser@*":
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/@types/range-parser/-/range-parser-1.2.2.tgz#fa8e1ad1d474688a757140c91de6dace6f4abc8d"
 
-"@types/sequelize@4.27.24":
-  version "4.27.24"
-  resolved "https://registry.yarnpkg.com/@types/sequelize/-/sequelize-4.27.24.tgz#7d593c062c368f570c68b0217f5c1d4c892ead48"
+"@types/sequelize@4.27.27":
+  version "4.27.27"
+  resolved "http://localhost:4873/@types%2fsequelize/-/sequelize-4.27.27.tgz#49a91693e795c328b6d8e3802574bc3def137cc3"
   dependencies:
     "@types/bluebird" "*"
     "@types/continuation-local-storage" "*"
@@ -128,6 +132,10 @@ ansi-colors@^1.0.1:
   resolved "https://registry.yarnpkg.com/ansi-colors/-/ansi-colors-1.1.0.tgz#6374b4dd5d4718ff3ce27a671a3b1cad077132a9"
   dependencies:
     ansi-wrap "^0.1.0"
+
+ansi-colors@^2.0.2:
+  version "2.0.5"
+  resolved "http://localhost:4873/ansi-colors/-/ansi-colors-2.0.5.tgz#5da37825fef3e75f3bda47f760d64bfd10e15e10"
 
 ansi-cyan@^0.1.1:
   version "0.1.1"
@@ -169,9 +177,9 @@ ansi-wrap@0.1.0, ansi-wrap@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/ansi-wrap/-/ansi-wrap-0.1.0.tgz#a82250ddb0015e9a27ca82e82ea603bbfa45efaf"
 
-ansicolors@~0.2.1:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/ansicolors/-/ansicolors-0.2.1.tgz#be089599097b74a5c9c4a84a0cdbcdb62bd87aef"
+ansicolors@~0.3.2:
+  version "0.3.2"
+  resolved "http://localhost:4873/ansicolors/-/ansicolors-0.3.2.tgz#665597de86a9ffe3aa9bfbe6cae5c6ea426b4979"
 
 anymatch@^2.0.0:
   version "2.0.0"
@@ -180,13 +188,12 @@ anymatch@^2.0.0:
     micromatch "^3.1.4"
     normalize-path "^2.1.1"
 
-apollo-link@1.2.2:
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/apollo-link/-/apollo-link-1.2.2.tgz#54c84199b18ac1af8d63553a68ca389c05217a03"
+apollo-link@^1.2.3:
+  version "1.2.3"
+  resolved "http://localhost:4873/apollo-link/-/apollo-link-1.2.3.tgz#9bd8d5fe1d88d31dc91dae9ecc22474d451fb70d"
   dependencies:
-    "@types/graphql" "0.12.6"
     apollo-utilities "^1.0.0"
-    zen-observable-ts "^0.8.9"
+    zen-observable-ts "^0.8.10"
 
 apollo-utilities@^1.0.0, apollo-utilities@^1.0.1:
   version "1.0.17"
@@ -404,12 +411,12 @@ capture-stack-trace@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/capture-stack-trace/-/capture-stack-trace-1.0.0.tgz#4a6fa07399c26bba47f0b2496b4d0fb408c5550d"
 
-cardinal@1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/cardinal/-/cardinal-1.0.0.tgz#50e21c1b0aa37729f9377def196b5a9cec932ee9"
+cardinal@2.1.1:
+  version "2.1.1"
+  resolved "http://localhost:4873/cardinal/-/cardinal-2.1.1.tgz#7cc1055d822d212954d07b085dea251cc7bc5505"
   dependencies:
-    ansicolors "~0.2.1"
-    redeyed "~1.0.0"
+    ansicolors "~0.3.2"
+    redeyed "~2.1.0"
 
 chalk@^1.0.0:
   version "1.1.3"
@@ -618,7 +625,7 @@ core-util-is@~1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
 
-cors@^2.8.4:
+cors@2.8.4:
   version "2.8.4"
   resolved "http://localhost:4873/cors/-/cors-2.8.4.tgz#2bd381f2eb201020105cd50ea59da63090694686"
   dependencies:
@@ -713,9 +720,9 @@ delegates@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/delegates/-/delegates-1.0.0.tgz#84c6e159b81904fdca59a0ef44cd870d31250f9a"
 
-denque@1.2.3:
-  version "1.2.3"
-  resolved "https://registry.yarnpkg.com/denque/-/denque-1.2.3.tgz#98c50c8dd8cdfae318cc5859cc8ee3da0f9b0cc2"
+denque@1.3.0:
+  version "1.3.0"
+  resolved "http://localhost:4873/denque/-/denque-1.3.0.tgz#681092ef44a630246d3f6edb2a199230eae8e76b"
 
 depd@1.1.1:
   version "1.1.1"
@@ -860,9 +867,9 @@ escape-string-regexp@^1.0.2, escape-string-regexp@^1.0.5:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
 
-esprima@~3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/esprima/-/esprima-3.0.0.tgz#53cf247acda77313e551c3aa2e73342d3fb4f7d9"
+esprima@~4.0.0:
+  version "4.0.1"
+  resolved "http://localhost:4873/esprima/-/esprima-4.0.1.tgz#13b04cdb3e6c5d19df91ab6987a8695619b0aa71"
 
 etag@~1.8.1:
   version "1.8.1"
@@ -1326,21 +1333,21 @@ graphql-relay@0.5.5:
   version "0.5.5"
   resolved "http://localhost:4873/graphql-relay/-/graphql-relay-0.5.5.tgz#d6815e6edd618e878d5d921c13fc66033ec867e2"
 
-graphql-tools@3.0.5:
-  version "3.0.5"
-  resolved "https://registry.yarnpkg.com/graphql-tools/-/graphql-tools-3.0.5.tgz#544542dbf2fddc8c3d7d654965285a3bc747b10b"
+graphql-tools@4.0.0:
+  version "4.0.0"
+  resolved "http://localhost:4873/graphql-tools/-/graphql-tools-4.0.0.tgz#6ea01937c6f947212f83567ba687e97c22fdd2a6"
   dependencies:
-    apollo-link "1.2.2"
+    apollo-link "^1.2.3"
     apollo-utilities "^1.0.1"
     deprecated-decorator "^0.1.6"
     iterall "^1.1.3"
     uuid "^3.1.0"
 
-graphql@0.13.2:
-  version "0.13.2"
-  resolved "https://registry.yarnpkg.com/graphql/-/graphql-0.13.2.tgz#4c740ae3c222823e7004096f832e7b93b2108270"
+graphql@14.0.2:
+  version "14.0.2"
+  resolved "http://localhost:4873/graphql/-/graphql-14.0.2.tgz#7dded337a4c3fd2d075692323384034b357f5650"
   dependencies:
-    iterall "^1.2.1"
+    iterall "^1.2.2"
 
 gulp-clean@0.4.0:
   version "0.4.0"
@@ -1352,16 +1359,16 @@ gulp-clean@0.4.0:
     through2 "^2.0.3"
     vinyl "^2.1.0"
 
-gulp-typescript@4.0.2:
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/gulp-typescript/-/gulp-typescript-4.0.2.tgz#80bb9e376e7aa87b763a6ad5fe054a5d078da1e6"
+gulp-typescript@5.0.0-alpha.3:
+  version "5.0.0-alpha.3"
+  resolved "http://localhost:4873/gulp-typescript/-/gulp-typescript-5.0.0-alpha.3.tgz#c49a306cbbb8c97f5fe8a79208671b6642ef9861"
   dependencies:
-    ansi-colors "^1.0.1"
-    plugin-error "^0.1.2"
-    source-map "^0.6.1"
+    ansi-colors "^2.0.2"
+    plugin-error "^1.0.1"
+    source-map "^0.7.3"
     through2 "^2.0.3"
     vinyl "^2.1.0"
-    vinyl-fs "^3.0.0"
+    vinyl-fs "^3.0.3"
 
 gulp-util@^3.0.0:
   version "3.0.8"
@@ -1764,9 +1771,9 @@ isobject@^3.0.0, isobject@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/isobject/-/isobject-3.0.1.tgz#4e431e92b11a9731636aa1f9c8d1ccbcfdab78df"
 
-iterall@^1.1.3, iterall@^1.2.1:
+iterall@^1.1.3, iterall@^1.2.2:
   version "1.2.2"
-  resolved "https://registry.yarnpkg.com/iterall/-/iterall-1.2.2.tgz#92d70deb8028e0c39ff3164fdbf4d8b088130cd7"
+  resolved "http://localhost:4873/iterall/-/iterall-1.2.2.tgz#92d70deb8028e0c39ff3164fdbf4d8b088130cd7"
 
 js-beautify@^1.7.4:
   version "1.7.5"
@@ -2234,20 +2241,18 @@ multipipe@^0.1.2:
   dependencies:
     duplexer2 "0.0.2"
 
-mysql2@1.5.3:
-  version "1.5.3"
-  resolved "https://registry.yarnpkg.com/mysql2/-/mysql2-1.5.3.tgz#d905a1a06da0469828287608ce68647b8130748f"
+mysql2@1.6.1:
+  version "1.6.1"
+  resolved "http://localhost:4873/mysql2/-/mysql2-1.6.1.tgz#9027fd93a05c5d86e79bfada35c9b677b3a0d7c5"
   dependencies:
-    cardinal "1.0.0"
-    denque "1.2.3"
+    cardinal "2.1.1"
+    denque "1.3.0"
     generate-function "^2.0.0"
     iconv-lite "^0.4.18"
     long "^4.0.0"
     lru-cache "4.1.1"
     named-placeholders "1.1.1"
     object-assign "^4.1.1"
-    readable-stream "2.3.5"
-    safe-buffer "^5.0.1"
     seq-queue "0.0.5"
     sqlstring "2.3.1"
 
@@ -2312,9 +2317,9 @@ node-pre-gyp@^0.10.0:
     semver "^5.3.0"
     tar "^4"
 
-nodemon@1.18.3:
-  version "1.18.3"
-  resolved "https://registry.yarnpkg.com/nodemon/-/nodemon-1.18.3.tgz#46e681ee0dd1b590562e03019b4c5df234f906f9"
+nodemon@1.18.4:
+  version "1.18.4"
+  resolved "http://localhost:4873/nodemon/-/nodemon-1.18.4.tgz#873f65fdb53220eb166180cf106b1354ac5d714d"
   dependencies:
     chokidar "^2.0.2"
     debug "^3.1.0"
@@ -2636,6 +2641,15 @@ plugin-error@^0.1.2:
     arr-union "^2.0.1"
     extend-shallow "^1.1.2"
 
+plugin-error@^1.0.1:
+  version "1.0.1"
+  resolved "http://localhost:4873/plugin-error/-/plugin-error-1.0.1.tgz#77016bd8919d0ac377fdcdd0322328953ca5781c"
+  dependencies:
+    ansi-colors "^1.0.1"
+    arr-diff "^4.0.0"
+    arr-union "^3.1.0"
+    extend-shallow "^3.0.2"
+
 posix-character-classes@^0.1.0:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/posix-character-classes/-/posix-character-classes-0.1.1.tgz#01eac0fe3b5af71a2a6c02feabb8c1fef7e00eab"
@@ -2744,18 +2758,6 @@ read-pkg@^2.0.0:
     normalize-package-data "^2.3.2"
     path-type "^2.0.0"
 
-readable-stream@2.3.5:
-  version "2.3.5"
-  resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-2.3.5.tgz#b4f85003a938cbb6ecbce2a124fb1012bd1a838d"
-  dependencies:
-    core-util-is "~1.0.0"
-    inherits "~2.0.3"
-    isarray "~1.0.0"
-    process-nextick-args "~2.0.0"
-    safe-buffer "~5.1.1"
-    string_decoder "~1.0.3"
-    util-deprecate "~1.0.1"
-
 "readable-stream@>=1.0.33-1 <1.1.0-0":
   version "1.0.34"
   resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-1.0.34.tgz#125820e34bc842d2f2aaafafe4c2916ee32c157c"
@@ -2801,11 +2803,11 @@ rechoir@^0.6.2:
   dependencies:
     resolve "^1.1.6"
 
-redeyed@~1.0.0:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/redeyed/-/redeyed-1.0.1.tgz#e96c193b40c0816b00aec842698e61185e55498a"
+redeyed@~2.1.0:
+  version "2.1.1"
+  resolved "http://localhost:4873/redeyed/-/redeyed-2.1.1.tgz#8984b5815d99cb220469c99eeeffe38913e6cc0b"
   dependencies:
-    esprima "~3.0.0"
+    esprima "~4.0.0"
 
 regenerator-runtime@^0.11.0:
   version "0.11.1"
@@ -2972,9 +2974,9 @@ seq-queue@0.0.5:
   version "0.0.5"
   resolved "https://registry.yarnpkg.com/seq-queue/-/seq-queue-0.0.5.tgz#d56812e1c017a6e4e7c3e3a37a1da6d78dd3c93e"
 
-sequelize-cli@^4.0.0:
+sequelize-cli@4.0.0:
   version "4.0.0"
-  resolved "https://registry.yarnpkg.com/sequelize-cli/-/sequelize-cli-4.0.0.tgz#4d641dfb58b0370ab440f737e1b0bf737f15eca5"
+  resolved "http://localhost:4873/sequelize-cli/-/sequelize-cli-4.0.0.tgz#4d641dfb58b0370ab440f737e1b0bf737f15eca5"
   dependencies:
     bluebird "^3.5.1"
     cli-color "^1.2.0"
@@ -2985,9 +2987,9 @@ sequelize-cli@^4.0.0:
     umzug "^2.1.0"
     yargs "^8.0.2"
 
-sequelize@4.38.0:
-  version "4.38.0"
-  resolved "https://registry.yarnpkg.com/sequelize/-/sequelize-4.38.0.tgz#330c1aa445d4e46b80a97d895603c01666cdc357"
+sequelize@4.39.0:
+  version "4.39.0"
+  resolved "http://localhost:4873/sequelize/-/sequelize-4.39.0.tgz#0e070a4705367e4b0779183f812c72f478ff12b9"
   dependencies:
     bluebird "^3.5.0"
     cls-bluebird "^2.1.0"
@@ -3121,9 +3123,9 @@ source-map@^0.5.6:
   version "0.5.7"
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.5.7.tgz#8a039d2d1021d22d1ea14c80d8ea468ba2ef3fcc"
 
-source-map@^0.6.1:
-  version "0.6.1"
-  resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
+source-map@^0.7.3:
+  version "0.7.3"
+  resolved "http://localhost:4873/source-map/-/source-map-0.7.3.tgz#5302f8169031735226544092e64981f751750383"
 
 sparkles@^1.0.0:
   version "1.0.1"
@@ -3214,12 +3216,6 @@ string-width@^1.0.1:
 string_decoder@~0.10.x:
   version "0.10.31"
   resolved "https://registry.yarnpkg.com/string_decoder/-/string_decoder-0.10.31.tgz#62e203bc41766c6c28c9fc84301dab1c5310fa94"
-
-string_decoder@~1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/string_decoder/-/string_decoder-1.0.3.tgz#0fc67d7c141825de94282dd536bec6b9bce860ab"
-  dependencies:
-    safe-buffer "~5.1.0"
 
 string_decoder@~1.1.1:
   version "1.1.1"
@@ -3397,9 +3393,9 @@ type-is@~1.6.15, type-is@~1.6.16:
     media-typer "0.3.0"
     mime-types "~2.1.18"
 
-typescript@2.9.2:
-  version "2.9.2"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.9.2.tgz#1cbf61d05d6b96269244eb6a3bce4bd914e0f00c"
+typescript@3.1.1:
+  version "3.1.1"
+  resolved "http://localhost:4873/typescript/-/typescript-3.1.1.tgz#3362ba9dd1e482ebb2355b02dfe8bcd19a2c7c96"
 
 umzug@^2.1.0:
   version "2.1.0"
@@ -3552,9 +3548,9 @@ vinyl-fs@^0.3.0:
     through2 "^0.6.1"
     vinyl "^0.4.0"
 
-vinyl-fs@^3.0.0:
+vinyl-fs@^3.0.3:
   version "3.0.3"
-  resolved "https://registry.yarnpkg.com/vinyl-fs/-/vinyl-fs-3.0.3.tgz#c85849405f67428feabbbd5c5dbdd64f47d31bc7"
+  resolved "http://localhost:4873/vinyl-fs/-/vinyl-fs-3.0.3.tgz#c85849405f67428feabbbd5c5dbdd64f47d31bc7"
   dependencies:
     fs-mkdirp-stream "^1.0.0"
     glob-stream "^6.1.0"
@@ -3703,9 +3699,9 @@ yargs@^8.0.2:
     y18n "^3.2.1"
     yargs-parser "^7.0.0"
 
-zen-observable-ts@^0.8.9:
-  version "0.8.9"
-  resolved "https://registry.yarnpkg.com/zen-observable-ts/-/zen-observable-ts-0.8.9.tgz#d3c97af08c0afdca37ebcadf7cc3ee96bda9bab1"
+zen-observable-ts@^0.8.10:
+  version "0.8.10"
+  resolved "http://localhost:4873/zen-observable-ts/-/zen-observable-ts-0.8.10.tgz#18e2ce1c89fe026e9621fd83cc05168228fce829"
   dependencies:
     zen-observable "^0.8.0"
 
