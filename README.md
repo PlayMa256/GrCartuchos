@@ -7,5 +7,5 @@ And of course, since my mom manages the business, she would like to add more fea
 
 
 ## Backend
-The backend is going to be rewrite using graphql + sequelize to manage the queries for the necessary tables. I'm reusing a TS + graphql project that i started on a couse about graphql that i was taken. It is a good oportunity to exercise those concepts.
+The backend is going to be rewrite using graphql + sequelize to manage the queries for the necessary tables. I'm reusing a TS + graphql project that i started on a couse about graphql that i was taking. It is a good oportunity to exercise those concepts.
 
