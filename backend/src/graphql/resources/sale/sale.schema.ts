@@ -5,7 +5,6 @@ export const SaleType = `
 		product: Product!
 		quantity: Int!
 		price: String!
-		date: String
 		status: String
 		paymentDate: String
 	}
@@ -13,13 +12,12 @@ export const SaleType = `
 	input SaleInput{
 		client: String!
 		items: [SaleProductInput]!
-		date: String
 		status: String
 		paymentDate: String
 	}
 
 	input SaleProductInput {
-		product: ProductInput!
+		product: String!
 		quantity: Int!
 		price: String!
 	}
@@ -33,6 +31,6 @@ export const saleQueries = `
 `;
 
 export const saleMutations = `
-	createSale(input: SaleInput): Sale
+	createSale(input: SaleInput): [Sale]
 	deleteSale(id: ID!): Boolean
 `;

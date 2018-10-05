@@ -48,7 +48,6 @@ type Sale {
   product: Product!
   quantity: Int!
   price: String!
-  date: String
   status: String
   paymentDate: String
 }
@@ -62,7 +61,6 @@ input SaleProductInput {
 input SaleInput {
   client: String!
   items: [SaleProductInput]!
-  date: String
   status: String
   paymentDate: String
 }
@@ -132,7 +130,7 @@ type Mutation {
   updateProduct(input: ProductInput!, id: ID!): Product
   deleteProduct(id: ID!): Boolean
 
-  createSale(input: SaleInput): Sale
+  createSale(input: SaleInput): [Sale]
   deleteSale(id: ID!): Boolean
 
   createSupplier(name: String!): Supplier

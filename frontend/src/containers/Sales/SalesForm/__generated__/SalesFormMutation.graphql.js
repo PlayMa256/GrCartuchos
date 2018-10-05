@@ -1,6 +1,6 @@
 /**
  * @flow
- * @relayHash 5b69884e650c412345fe5d2e7da682df
+ * @relayHash 7dbda09652c977479f3626e5ff6a24a8
  */
 
 /* eslint-disable */
@@ -29,9 +29,9 @@ export type SalesFormMutationVariables = {|
   input: SaleInput
 |};
 export type SalesFormMutationResponse = {|
-  +createSale: ?{|
+  +createSale: ?$ReadOnlyArray<?{|
     +id: string
-  |}
+  |}>
 |};
 export type SalesFormMutation = {|
   variables: SalesFormMutationVariables,
@@ -73,7 +73,7 @@ const node /*: ConcreteRequest*/ = (function() {
           }
         ],
         concreteType: "Sale",
-        plural: false,
+        plural: true,
         selections: [
           {
             kind: "ScalarField",

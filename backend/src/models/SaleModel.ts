@@ -1,12 +1,11 @@
 import * as Sequelize from "sequelize";
 
 export interface SaleAttributes {
-	id: number;
-	client: string;
-	product: string;
+	id?: number;
+	client: string | number;
+	product: string | number;
 	quantity: number;
 	price: string;
-	date: string;
 	status: "PAID" | "NOT PAID";
 	paymentDate?: string;
 }
@@ -37,17 +36,13 @@ export default (
 				type: DataTypes["DOUBLE"],
 				allowNull: false
 			},
-			date: {
-				type: DataTypes.DATE,
-				allowNull: false
-			},
 			status: {
 				type: DataTypes.TEXT,
 				allowNull: false
 			},
 			paymentDate: {
 				type: DataTypes.TEXT,
-				allowNull: false
+				allowNull: true
 			}
 		},
 		{

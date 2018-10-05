@@ -32,7 +32,7 @@ class SalesForm extends React.PureComponent {
     sales: [
       {
         product: "",
-        qty: "",
+        quantity: "",
         price: ""
       }
     ],
@@ -52,7 +52,7 @@ class SalesForm extends React.PureComponent {
       const internalSales = [...state.sales].concat([
         {
           product: "",
-          qty: "",
+          quantity: "",
           price: ""
         }
       ]);
@@ -80,13 +80,17 @@ class SalesForm extends React.PureComponent {
 
   handleChangeSales = (index, key) => {
     return evt => {
-      console.log(evt);
       const value = evt.target.value;
       this.setState(state => {
         const sales = [...state.sales];
         const object = sales[index];
-        object[key] = value;
+        if (key === "quantity") {
+          object[key] = parseInt(value, 10);
+        } else {
+          object[key] = value;
+        }
         sales[index] = object;
+        console.log(sales);
         return { sales };
       });
     };
@@ -136,8 +140,8 @@ class SalesForm extends React.PureComponent {
               <Input
                 type="text"
                 placeholder="Quantidade"
-                value={sales[i].qty}
-                onChange={this.handleChangeSales(i, "qty")}
+                value={sales[i].quantity}
+                onChange={this.handleChangeSales(i, "quantity")}
               />
             </FormGroup>
           </Col>
@@ -187,8 +191,7 @@ class SalesForm extends React.PureComponent {
     const variables = {
       input: {
         client: client,
-        items: sales,
-        date: moment()
+        items: sales
       }
     };
 

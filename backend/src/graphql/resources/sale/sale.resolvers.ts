@@ -70,26 +70,23 @@ export const saleResolvers = {
 					const product = Buffer.from(input.client, 'base64').toString('ascii').replace('Product', '');
 					return db.Sale.create({
 						client: parseInt(client),
-						product: parseInt(10, product),
+						product: parseInt(product, 10),
 						quantity: sale.quantity,
 						price: sale.price,
-						date: input.date,
 						status: "NOT PAID"
 					}, {
 							transaction: t
 						})
 						.then((sale) => {
-							results.push(sale)
+							return sale;
 						})
-						.catch((err) => {
-							throw new Error(err)
-						});
+						.catch((error) => console.log(error));
 				})
 			});
 
 			return Promise.all(salesCreation)
-				.then(() => {
-					return Promise.resolve(results);
+				.then((something) => {
+					return Promise.resolve(something);
 				})
 				.catch((err) => {
 					throw new Error(err)
