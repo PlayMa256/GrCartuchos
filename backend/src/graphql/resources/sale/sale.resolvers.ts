@@ -5,10 +5,26 @@ import { handleError } from "../../../utils/utils";
 export const saleResolvers = {
 	Sale: {
 		client: (sale, args, { db }: GraphqlContext, info: GraphQLResolveInfo) => {
-			return db.Client.findById(sale.get('client')).catch(handleError);
+			return db.Client.findById(sale.get('client'))
+				.then((client) => {
+					return client;
+				})
+				.catch(handleError);
 		},
-		product: (sale, args, { db }: GraphqlContext, info: GraphQLResolveInfo) => {
-			return db.Product.findById(sale.get('product')).catch(handleError);
+		items: (sale, args, { db }: GraphqlContext, info: GraphQLResolveInfo) => { 
+			const saleId = sale.get('id');
+			return db.SaleItem.findAll({
+				where: {
+					saleId
+				}
+			})
+		}
+	},
+	SaleProductType: {
+		product: async (parent, args, { db }: GraphqlContext, info: GraphQLResolveInfo) => { 
+			const productId = parent.get('product');
+			const product = await db.Product.findById(productId);
+			return product;
 		}
 	},
 	Query: {
@@ -49,6 +65,7 @@ export const saleResolvers = {
 		saleByProductId: (parent, {id}, { db }: GraphqlContext, info: GraphQLResolveInfo) => {
 			return db.Sale.findAll({
 				where: {
+					// @ts-ignore
 					product: id
 				}
 			})
@@ -63,25 +80,24 @@ export const saleResolvers = {
 	Mutation: {
 		createSale: (parent, { input }, { db }: GraphqlContext, info: GraphQLResolveInfo) => {
 			const sales = input.items;
-			const results = []
 			const client = Buffer.from(input.client, 'base64').toString('ascii').replace('Client', '');
+			
 			const salesCreation = sales.map((sale) => {
-				return db.sequelize.transaction((t) => {
-					const product = Buffer.from(input.client, 'base64').toString('ascii').replace('Product', '');
-					return db.Sale.create({
-						client: parseInt(client),
-						product: parseInt(product, 10),
-						quantity: sale.quantity,
-						price: sale.price,
-						status: "NOT PAID"
-					}, {
-							transaction: t
-						})
-						.then((sale) => {
-							return sale;
-						})
-						.catch((error) => console.log(error));
+				const product = Buffer.from(input.client, 'base64').toString('ascii').replace('Product', '');
+				return db.Sale.create({
+					client: parseInt(client),
+					status: "NOT PAID"
 				})
+					.then((s) => {
+						const saleId = s.get('id');
+							return db.SaleItem.create({
+								product: parseInt(product, 10),
+								quantity: sale.quantity,
+								price: sale.price,
+								saleId
+							})
+					})
+					.catch((error) => console.log(error));
 			});
 
 			return Promise.all(salesCreation)

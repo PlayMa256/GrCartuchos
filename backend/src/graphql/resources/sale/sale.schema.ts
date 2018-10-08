@@ -1,12 +1,18 @@
 export const SaleType = `
+	type SaleProductType {
+		product: Product
+		quantity: Int
+		price: String
+	}
+
 	type Sale{
 		id: ID!
 		client: Client!
-		product: Product!
-		quantity: Int!
-		price: String!
+		items: [SaleProductType]!
 		status: String
 		paymentDate: String
+		createdAt: String
+		updatedAt: String
 	}
 
 	input SaleInput{

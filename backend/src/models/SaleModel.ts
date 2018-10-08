@@ -3,9 +3,6 @@ import * as Sequelize from "sequelize";
 export interface SaleAttributes {
 	id?: number;
 	client: string | number;
-	product: string | number;
-	quantity: number;
-	price: string;
 	status: "PAID" | "NOT PAID";
 	paymentDate?: string;
 }
@@ -28,14 +25,6 @@ export default (
 				allowNull: false,
 				autoIncrement: true
 			},
-			quantity: {
-				type: DataTypes.DECIMAL,
-				allowNull: false
-			},
-			price: {
-				type: DataTypes["DOUBLE"],
-				allowNull: false
-			},
 			status: {
 				type: DataTypes.TEXT,
 				allowNull: false
@@ -56,13 +45,6 @@ export default (
 				allowNull: false,
 				field: "client",
 				name: "client"
-			}
-		});
-		Sale.belongsTo(models.Product, {
-			foreignKey: {
-				allowNull: false,
-				field: "product",
-				name: "product"
 			}
 		});
 	};

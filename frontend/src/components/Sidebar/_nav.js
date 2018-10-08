@@ -38,6 +38,10 @@ export default {
         {
           name: "Adicionar",
           url: "/vendas/add"
+        },
+        {
+          name: "Lista",
+          url: "/vendas/list"
         }
       ]
     },

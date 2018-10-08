@@ -1,14 +1,13 @@
 {
   "parser": "babel-eslint",
   "extends": [
-    "plugin:prettier/recommended",
-    "plugin:react/recommended"
-  ],
-  "plugins": [
-    "react",
+    "eslint:recommended",
+    "plugin:react/recommended",
     "prettier",
-    "import"
+    "prettier/react",
+    "prettier/standard"
   ],
+  "plugins": ["react", "prettier", "import"],
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true,

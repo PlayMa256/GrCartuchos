@@ -1,6 +1,6 @@
 /**
  * @flow
- * @relayHash 7dbda09652c977479f3626e5ff6a24a8
+ * @relayHash dac508b1c0850bce1dde287074931f2f
  */
 
 /* eslint-disable */
@@ -12,7 +12,6 @@ import type { ConcreteRequest } from 'relay-runtime';
 export type SaleInput = {
   client: string,
   items: $ReadOnlyArray<?SaleProductInput>,
-  date?: ?string,
   status?: ?string,
   paymentDate?: ?string,
 };
