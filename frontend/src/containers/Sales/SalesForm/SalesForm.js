@@ -3,32 +3,25 @@ import {
   Alert,
   Row,
   Col,
-  Button,
-  ButtonDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
   Card,
+  Button,
   CardHeader,
   CardFooter,
   CardBody,
-  Collapse,
   Form,
   FormGroup,
-  FormText,
   Label,
-  Input,
-  InputGroup,
-  InputGroupAddon,
-  InputGroupText
+  Input
 } from "reactstrap";
-import moment from "moment";
+import NewWindow from "react-new-window";
 import { graphql, commitMutation, QueryRenderer } from "react-relay";
 import modernEnvironment from "../../../createRelayEnvieronment";
 import "./styles.scss";
+import SalePrint from "../SalePrint/SalePrint";
 
 class SalesForm extends React.PureComponent {
   state = {
+    showPrint: false,
     sales: [
       {
         product: "",
@@ -47,7 +40,6 @@ class SalesForm extends React.PureComponent {
   };
 
   addMoreFields = () => {
-    const { numFields } = this.state;
     this.setState(state => {
       const internalSales = [...state.sales].concat([
         {
@@ -90,7 +82,6 @@ class SalesForm extends React.PureComponent {
           object[key] = value;
         }
         sales[index] = object;
-        console.log(sales);
         return { sales };
       });
     };
@@ -113,6 +104,12 @@ class SalesForm extends React.PureComponent {
         {alertContent}
       </Alert>
     );
+  };
+
+  showPrint = () => {
+    this.setState({
+      showPrint: true
+    });
   };
 
   renderFormFields = ({ products }) => {
@@ -198,7 +195,7 @@ class SalesForm extends React.PureComponent {
     commitMutation(modernEnvironment, {
       mutation,
       variables,
-      onCompleted: (response, errors) => {
+      onCompleted: () => {
         this.setState({
           success: true,
           isAlertOpen: true,
@@ -234,7 +231,7 @@ class SalesForm extends React.PureComponent {
           }
         `}
         variables={{}}
-        render={({ error, props }) => {
+        render={({ props }) => {
           const { clients, products } = props || {};
 
           return (
@@ -277,7 +274,12 @@ class SalesForm extends React.PureComponent {
                         {this.renderFormFields({ products })}
                       </CardBody>
                       <CardFooter>
-                        <Button type="submit" size="sm" color="primary">
+                        <Button
+                          type="button"
+                          size="sm"
+                          color="primary"
+                          onClick={this.showPrint}
+                        >
                           <i className="fa fa-dot-circle-o" /> Cadastrar
                         </Button>
                       </CardFooter>
@@ -285,6 +287,11 @@ class SalesForm extends React.PureComponent {
                   </Form>
                 </Col>
               </Row>
+              {this.state.showPrint && (
+                <NewWindow>
+                  <SalePrint />
+                </NewWindow>
+              )}
             </div>
           );
         }}

@@ -11,6 +11,14 @@ import {
 } from "reactstrap";
 import classnames from "classnames";
 
+import AvatarImg8 from "../../../public/img/avatars/8.jpg";
+import AvatarImg7 from "../../../public/img/avatars/7.jpg";
+import AvatarImg6 from "../../../public/img/avatars/6.jpg";
+import AvatarImg5 from "../../../public/img/avatars/5.jpg";
+import AvatarImg4 from "../../../public/img/avatars/4.jpg";
+import AvatarImg3 from "../../../public/img/avatars/3.jpg";
+import AvatarImg2 from "../../../public/img/avatars/2.jpg";
+
 class Aside extends Component {
   constructor(props) {
     super(props);
@@ -75,7 +83,7 @@ class Aside extends Component {
             <div className="callout callout-warning m-0 py-3">
               <div className="avatar float-right">
                 <img
-                  src={"img/avatars/7.jpg"}
+                  src={AvatarImg7}
                   className="img-avatar"
                   alt="admin@bootstrapmaster.com"
                 />
@@ -84,17 +92,19 @@ class Aside extends Component {
                 Meeting with <strong>Lucas</strong>
               </div>
               <small className="text-muted mr-3">
-                <i className="icon-calendar" />&nbsp; 1 - 3pm
+                <i className="icon-calendar" />
+                &nbsp; 1 - 3pm
               </small>
               <small className="text-muted">
-                <i className="icon-location-pin" />&nbsp; Palo Alto, CA
+                <i className="icon-location-pin" />
+                &nbsp; Palo Alto, CA
               </small>
             </div>
             <hr className="mx-3 my-0" />
             <div className="callout callout-info m-0 py-3">
               <div className="avatar float-right">
                 <img
-                  src={"img/avatars/4.jpg"}
+                  src={AvatarImg4}
                   className="img-avatar"
                   alt="admin@bootstrapmaster.com"
                 />
@@ -103,10 +113,12 @@ class Aside extends Component {
                 Skype with <strong>Megan</strong>
               </div>
               <small className="text-muted mr-3">
-                <i className="icon-calendar" />&nbsp; 4 - 5pm
+                <i className="icon-calendar" />
+                &nbsp; 4 - 5pm
               </small>
               <small className="text-muted">
-                <i className="icon-social-skype" />&nbsp; On-line
+                <i className="icon-social-skype" />
+                &nbsp; On-line
               </small>
             </div>
             <hr className="transparent mx-3 my-0" />
@@ -121,43 +133,45 @@ class Aside extends Component {
                 New UI Project - <strong>deadline</strong>
               </div>
               <small className="text-muted mr-3">
-                <i className="icon-calendar" />&nbsp; 10 - 11pm
+                <i className="icon-calendar" />
+                &nbsp; 10 - 11pm
               </small>
               <small className="text-muted">
-                <i className="icon-home" />&nbsp; creativeLabs HQ
+                <i className="icon-home" />
+                &nbsp; creativeLabs HQ
               </small>
               <div className="avatars-stack mt-2">
                 <div className="avatar avatar-xs">
                   <img
-                    src={"img/avatars/2.jpg"}
+                    src={AvatarImg2}
                     className="img-avatar"
                     alt="admin@bootstrapmaster.com"
                   />
                 </div>
                 <div className="avatar avatar-xs">
                   <img
-                    src={"img/avatars/3.jpg"}
+                    src={AvatarImg3}
                     className="img-avatar"
                     alt="admin@bootstrapmaster.com"
                   />
                 </div>
                 <div className="avatar avatar-xs">
                   <img
-                    src={"img/avatars/4.jpg"}
+                    src={AvatarImg4}
                     className="img-avatar"
                     alt="admin@bootstrapmaster.com"
                   />
                 </div>
                 <div className="avatar avatar-xs">
                   <img
-                    src={"img/avatars/5.jpg"}
+                    src={AvatarImg5}
                     className="img-avatar"
                     alt="admin@bootstrapmaster.com"
                   />
                 </div>
                 <div className="avatar avatar-xs">
                   <img
-                    src={"img/avatars/6.jpg"}
+                    src={AvatarImg6}
                     className="img-avatar"
                     alt="admin@bootstrapmaster.com"
                   />
@@ -170,10 +184,12 @@ class Aside extends Component {
                 <strong>#10 Startups.Garden</strong> Meetup
               </div>
               <small className="text-muted mr-3">
-                <i className="icon-calendar" />&nbsp; 1 - 3pm
+                <i className="icon-calendar" />
+                &nbsp; 1 - 3pm
               </small>
               <small className="text-muted">
-                <i className="icon-location-pin" />&nbsp; Palo Alto, CA
+                <i className="icon-location-pin" />
+                &nbsp; Palo Alto, CA
               </small>
             </div>
             <hr className="mx-3 my-0" />
@@ -182,57 +198,59 @@ class Aside extends Component {
                 <strong>Team meeting</strong>
               </div>
               <small className="text-muted mr-3">
-                <i className="icon-calendar" />&nbsp; 4 - 6pm
+                <i className="icon-calendar" />
+                &nbsp; 4 - 6pm
               </small>
               <small className="text-muted">
-                <i className="icon-home" />&nbsp; creativeLabs HQ
+                <i className="icon-home" />
+                &nbsp; creativeLabs HQ
               </small>
               <div className="avatars-stack mt-2">
                 <div className="avatar avatar-xs">
                   <img
-                    src={"img/avatars/2.jpg"}
+                    src={AvatarImg2}
                     className="img-avatar"
                     alt="admin@bootstrapmaster.com"
                   />
                 </div>
                 <div className="avatar avatar-xs">
                   <img
-                    src={"img/avatars/3.jpg"}
+                    src={AvatarImg3}
                     className="img-avatar"
                     alt="admin@bootstrapmaster.com"
                   />
                 </div>
                 <div className="avatar avatar-xs">
                   <img
-                    src={"img/avatars/4.jpg"}
+                    src={AvatarImg4}
                     className="img-avatar"
                     alt="admin@bootstrapmaster.com"
                   />
                 </div>
                 <div className="avatar avatar-xs">
                   <img
-                    src={"img/avatars/5.jpg"}
+                    src={AvatarImg5}
                     className="img-avatar"
                     alt="admin@bootstrapmaster.com"
                   />
                 </div>
                 <div className="avatar avatar-xs">
                   <img
-                    src={"img/avatars/6.jpg"}
+                    src={AvatarImg6}
                     className="img-avatar"
                     alt="admin@bootstrapmaster.com"
                   />
                 </div>
                 <div className="avatar avatar-xs">
                   <img
-                    src={"img/avatars/7.jpg"}
+                    src={AvatarImg7}
                     className="img-avatar"
                     alt="admin@bootstrapmaster.com"
                   />
                 </div>
                 <div className="avatar avatar-xs">
                   <img
-                    src={"img/avatars/8.jpg"}
+                    src={AvatarImg8}
                     className="img-avatar"
                     alt="admin@bootstrapmaster.com"
                   />
@@ -246,7 +264,7 @@ class Aside extends Component {
               <div className="py-3 pb-5 mr-3 float-left">
                 <div className="avatar">
                   <img
-                    src={"img/avatars/7.jpg"}
+                    src={AvatarImg7}
                     className="img-avatar"
                     alt="admin@bootstrapmaster.com"
                   />
@@ -270,7 +288,7 @@ class Aside extends Component {
               <div className="py-3 pb-5 mr-3 float-left">
                 <div className="avatar">
                   <img
-                    src={"img/avatars/7.jpg"}
+                    src={AvatarImg7}
                     className="img-avatar"
                     alt="admin@bootstrapmaster.com"
                   />
@@ -294,7 +312,7 @@ class Aside extends Component {
               <div className="py-3 pb-5 mr-3 float-left">
                 <div className="avatar">
                   <img
-                    src={"img/avatars/7.jpg"}
+                    src={AvatarImg7}
                     className="img-avatar"
                     alt="admin@bootstrapmaster.com"
                   />
@@ -318,7 +336,7 @@ class Aside extends Component {
               <div className="py-3 pb-5 mr-3 float-left">
                 <div className="avatar">
                   <img
-                    src={"img/avatars/7.jpg"}
+                    src={AvatarImg7}
                     className="img-avatar"
                     alt="admin@bootstrapmaster.com"
                   />
@@ -342,7 +360,7 @@ class Aside extends Component {
               <div className="py-3 pb-5 mr-3 float-left">
                 <div className="avatar">
                   <img
-                    src={"img/avatars/7.jpg"}
+                    src={AvatarImg7}
                     className="img-avatar"
                     alt="admin@bootstrapmaster.com"
                   />

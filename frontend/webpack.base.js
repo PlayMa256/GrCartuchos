@@ -30,16 +30,7 @@ module.exports = {
       },
       {
         test: /\.(scss)$/,
-        use: [
-          "style-loader",
-          {
-            loader: "css-loader",
-            options: {
-              alias: { "../img": "../public/img" }
-            }
-          },
-          "sass-loader"
-        ]
+        use: ["style-loader", "css-loader", "sass-loader"]
       },
       {
         test: /\.css$/,
@@ -49,27 +40,18 @@ module.exports = {
         test: /\.(png|jpg|jpeg|gif|ico)$/,
         use: [
           {
-            loader: "file-loader",
-            options: {
-              name: "./img/[name].[hash].[ext]"
-            }
+            loader: "file-loader"
           }
         ]
       },
       {
         test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-        loader: "file-loader",
-        options: {
-          name: "./fonts/[name].[ext]"
-        }
+        loader: "file-loader"
       }
     ]
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new CopyWebpackPlugin([{ from: "./public/img", to: "img" }], {
-      copyUnmodified: false
-    }),
     new HtmlWebpackPlugin({
       inject: true,
       template: "./public/index.html"

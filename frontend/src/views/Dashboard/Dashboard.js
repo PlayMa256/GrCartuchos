@@ -22,6 +22,7 @@ import {
   Input,
   Table
 } from "reactstrap";
+import AvatarImg4 from "../../../public/img/avatars/4.jpg";
 
 const brandPrimary = "#20a8d8";
 const brandSuccess = "#4dbd74";
@@ -1465,7 +1466,7 @@ class Dashboard extends Component {
                       <td className="text-center">
                         <div className="avatar">
                           <img
-                            src={"img/avatars/4.jpg"}
+                            src={AvatarImg4}
                             className="img-avatar"
                             alt="admin@bootstrapmaster.com"
                           />

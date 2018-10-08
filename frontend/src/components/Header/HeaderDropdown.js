@@ -6,6 +6,7 @@ import {
   DropdownToggle,
   Dropdown
 } from "reactstrap";
+import AvatarImg from "../../../public/img/avatars/6.jpg";
 
 class HeaderDropdown extends Component {
   constructor(props) {
@@ -28,7 +29,7 @@ class HeaderDropdown extends Component {
       <Dropdown nav isOpen={this.state.dropdownOpen} toggle={this.toggle}>
         <DropdownToggle nav>
           <img
-            src={"img/avatars/6.jpg"}
+            src={AvatarImg}
             className="img-avatar"
             alt="admin@bootstrapmaster.com"
           />
@@ -38,20 +39,20 @@ class HeaderDropdown extends Component {
             <strong>Account</strong>
           </DropdownItem>
           <DropdownItem>
-            <i className="fa fa-bell-o" /> Updates<Badge color="info">42</Badge>
+            <i className="fa fa-bell-o" /> Updates
+            <Badge color="info">42</Badge>
           </DropdownItem>
           <DropdownItem>
-            <i className="fa fa-envelope-o" /> Messages<Badge color="success">
-              42
-            </Badge>
+            <i className="fa fa-envelope-o" /> Messages
+            <Badge color="success">42</Badge>
           </DropdownItem>
           <DropdownItem>
-            <i className="fa fa-tasks" /> Tasks<Badge color="danger">42</Badge>
+            <i className="fa fa-tasks" /> Tasks
+            <Badge color="danger">42</Badge>
           </DropdownItem>
           <DropdownItem>
-            <i className="fa fa-comments" /> Comments<Badge color="warning">
-              42
-            </Badge>
+            <i className="fa fa-comments" /> Comments
+            <Badge color="warning">42</Badge>
           </DropdownItem>
           <DropdownItem header tag="div" className="text-center">
             <strong>Settings</strong>
@@ -63,14 +64,12 @@ class HeaderDropdown extends Component {
             <i className="fa fa-wrench" /> Settings
           </DropdownItem>
           <DropdownItem>
-            <i className="fa fa-usd" /> Payments<Badge color="secondary">
-              42
-            </Badge>
+            <i className="fa fa-usd" /> Payments
+            <Badge color="secondary">42</Badge>
           </DropdownItem>
           <DropdownItem>
-            <i className="fa fa-file" /> Projects<Badge color="primary">
-              42
-            </Badge>
+            <i className="fa fa-file" /> Projects
+            <Badge color="primary">42</Badge>
           </DropdownItem>
           <DropdownItem divider />
           <DropdownItem>
