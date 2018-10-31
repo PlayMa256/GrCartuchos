@@ -5756,7 +5756,16 @@ react-popper@^0.10.4:
     popper.js "^1.14.1"
     prop-types "^15.6.1"
 
-react-relay@1.6.2, react-relay@^1.5.0:
+react-relay@1.7.0:
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/react-relay/-/react-relay-1.7.0.tgz#6a21df4e6bb52c7a02374ad288ccbeb0172f095d"
+  dependencies:
+    babel-runtime "^6.23.0"
+    fbjs "0.8.17"
+    prop-types "^15.5.8"
+    relay-runtime "1.7.0"
+
+react-relay@^1.5.0:
   version "1.6.2"
   resolved "https://registry.yarnpkg.com/react-relay/-/react-relay-1.6.2.tgz#2e48480390b327dbf28cb0d97420db64fae4bda6"
   dependencies:
@@ -6070,6 +6079,13 @@ relay-devtools@^1.4.0:
 relay-runtime@1.6.2, relay-runtime@^1.5.0:
   version "1.6.2"
   resolved "https://registry.yarnpkg.com/relay-runtime/-/relay-runtime-1.6.2.tgz#5ecd43d92799e761454200b455dd1c0cb0259659"
+  dependencies:
+    babel-runtime "^6.23.0"
+    fbjs "0.8.17"
+
+relay-runtime@1.7.0:
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/relay-runtime/-/relay-runtime-1.7.0.tgz#59cfb5cab361ef630099464e1b364342466cd212"
   dependencies:
     babel-runtime "^6.23.0"
     fbjs "0.8.17"
