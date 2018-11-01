@@ -122,7 +122,7 @@ export default class ClienteForm extends React.PureComponent {
               onSubmit={this.createClient}
             >
               <Card>
-                <CardHeader>Cadastrar Cliente</CardHeader>
+                <CardHeader>Cadastrar Clientes</CardHeader>
                 <CardBody>
                   <FormGroup row>
                     <Col md="3">
