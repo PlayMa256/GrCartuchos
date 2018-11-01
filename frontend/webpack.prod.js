@@ -8,9 +8,10 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const base = require("./webpack.base");
 
 const config = merge(base, {
+  entry: ["./src/index.js"],
   output: {
     path: BUILD_DIR,
-    filename: `[name].[hash].js`,
+    filename: `[name].[contenthash].js`,
     publicPath: "/"
   },
   mode: "production",

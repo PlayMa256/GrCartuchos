@@ -141,7 +141,7 @@ const cardChartOpts2 = {
 
 // Card Chart 3
 const cardChartData3 = {
-  labels: ["January", "February", "March", "April", "May", "June", "July"],
+  labels: ["January", "Fevereiro", "March", "April", "May", "June", "July"],
   datasets: [
     {
       label: "My First dataset",
@@ -301,7 +301,7 @@ const makeSparkLineData = (dataSetNo, variant) => {
   const data = {
     labels: [
       "Monday",
-      "Tuesday",
+      "Terça feira",
       "Wednesday",
       "Thursday",
       "Friday",

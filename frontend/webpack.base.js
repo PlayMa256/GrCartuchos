@@ -6,13 +6,8 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 const BUILD_DIR = path.resolve(__dirname, "build");
 
 module.exports = {
-  target: "web",
-  entry: ["babel-polyfill", "./src/index.js"],
-
   output: {
-    path: BUILD_DIR,
-    filename: `[name].js`,
-    publicPath: "/"
+    path: BUILD_DIR
   },
 
   module: {
@@ -53,7 +48,6 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
-      inject: true,
       template: "./public/index.html"
     })
   ]

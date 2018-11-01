@@ -1,4 +1,5 @@
 import React from "react";
+import '@babel/polyfill';
 import ReactDOM from "react-dom";
 import moment from "moment";
 import { HashRouter, Route, Switch } from "react-router-dom";
