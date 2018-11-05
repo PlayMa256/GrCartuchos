@@ -22,7 +22,14 @@ import {
   Input,
   Table
 } from "reactstrap";
+import AvatarImg8 from "../../../public/img/avatars/8.jpg";
+import AvatarImg7 from "../../../public/img/avatars/7.jpg";
+import AvatarImg6 from "../../../public/img/avatars/6.jpg";
+import AvatarImg5 from "../../../public/img/avatars/5.jpg";
 import AvatarImg4 from "../../../public/img/avatars/4.jpg";
+import AvatarImg3 from "../../../public/img/avatars/3.jpg";
+import AvatarImg2 from "../../../public/img/avatars/2.jpg";
+import AvatarImg1 from "../../../public/img/avatars/1.jpg";
 
 const brandPrimary = "#20a8d8";
 const brandSuccess = "#4dbd74";
@@ -1310,7 +1317,7 @@ class Dashboard extends Component {
                       <td className="text-center">
                         <div className="avatar">
                           <img
-                            src={"img/avatars/1.jpg"}
+                            src={AvatarImg1}
                             className="img-avatar"
                             alt="admin@bootstrapmaster.com"
                           />
@@ -1362,7 +1369,7 @@ class Dashboard extends Component {
                       <td className="text-center">
                         <div className="avatar">
                           <img
-                            src={"img/avatars/2.jpg"}
+                            src={AvatarImg2}
                             className="img-avatar"
                             alt="admin@bootstrapmaster.com"
                           />
@@ -1414,7 +1421,7 @@ class Dashboard extends Component {
                       <td className="text-center">
                         <div className="avatar">
                           <img
-                            src={"img/avatars/3.jpg"}
+                            src={AvatarImg3}
                             className="img-avatar"
                             alt="admin@bootstrapmaster.com"
                           />
@@ -1518,7 +1525,7 @@ class Dashboard extends Component {
                       <td className="text-center">
                         <div className="avatar">
                           <img
-                            src={"img/avatars/5.jpg"}
+                            src={AvatarImg5}
                             className="img-avatar"
                             alt="admin@bootstrapmaster.com"
                           />
@@ -1570,7 +1577,7 @@ class Dashboard extends Component {
                       <td className="text-center">
                         <div className="avatar">
                           <img
-                            src={"img/avatars/6.jpg"}
+                            src={AvatarImg6}
                             className="img-avatar"
                             alt="admin@bootstrapmaster.com"
                           />

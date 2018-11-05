@@ -9,29 +9,7 @@ const base = require("./webpack.base");
 
 const config = merge(base, {
   entry: ["./src/index.js"],
-  output: {
-    path: BUILD_DIR,
-    filename: `[name].[contenthash].js`,
-    publicPath: "/"
-  },
   mode: "production",
-  module: {
-    rules: [
-      {
-        test: /\.(scss)$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          {
-            loader: "css-loader",
-            options: {
-              alias: { "../img": "../public/img" }
-            }
-          },
-          "sass-loader"
-        ]
-      }
-    ]
-  },
   plugins: [
     new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /pt-br/),
     new webpack.NamedModulesPlugin(),
@@ -41,7 +19,6 @@ const config = merge(base, {
     hints: false
   },
   optimization: {
-    runtimeChunk: true,
     minimize: true,
     splitChunks: {
       cacheGroups: {

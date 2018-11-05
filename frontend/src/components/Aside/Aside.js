@@ -18,6 +18,7 @@ import AvatarImg5 from "../../../public/img/avatars/5.jpg";
 import AvatarImg4 from "../../../public/img/avatars/4.jpg";
 import AvatarImg3 from "../../../public/img/avatars/3.jpg";
 import AvatarImg2 from "../../../public/img/avatars/2.jpg";
+import AvatarImg1 from "../../../public/img/avatars/1.jpg";
 
 class Aside extends Component {
   constructor(props) {

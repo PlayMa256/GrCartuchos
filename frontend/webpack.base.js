@@ -7,9 +7,10 @@ const BUILD_DIR = path.resolve(__dirname, "build");
 
 module.exports = {
   output: {
-    path: BUILD_DIR
+    path: BUILD_DIR,
+    filename: "[name].[hash].js",
+    publicPath: "/"
   },
-
   module: {
     rules: [
       {
@@ -18,10 +19,6 @@ module.exports = {
         use: {
           loader: "babel-loader"
         }
-      },
-      {
-        test: /\.html$/,
-        loader: "html-loader"
       },
       {
         test: /\.(scss)$/,
