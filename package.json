@@ -1,4 +1,10 @@
 {
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
   "name": "gr-cartuchos",
   "version": "1.0.0",
   "description": "[![Greenkeeper badge](https://badges.greenkeeper.io/PlayMa256/GrCartuchos.svg)](https://greenkeeper.io/)",

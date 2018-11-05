@@ -1,5 +1,5 @@
 {
-  "name": "gr-cartuchos",
+  "name": "frontend",
   "version": "1.0.0",
   "license": "MIT",
   "devDependencies": {
@@ -65,8 +65,5 @@
     "build": "rm -rf build/ && cross-env NODE_ENV=production webpack --mode production --config ./webpack.prod.js",
     "lint": "eslint src/*",
     "relay": "relay-compiler --src ./src --schema ./data/schema.graphql"
-  },
-  "dependencies": {
-    "react-new-window": "^0.0.9"
   }
 }
