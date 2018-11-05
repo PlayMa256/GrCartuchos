@@ -13,7 +13,6 @@ import {
   Label,
   Input
 } from "reactstrap";
-import NewWindow from "react-new-window";
 import { graphql, commitMutation, QueryRenderer } from "react-relay";
 import modernEnvironment from "../../../createRelayEnvieronment";
 import "./styles.scss";
@@ -287,11 +286,6 @@ class SalesForm extends React.PureComponent {
                   </Form>
                 </Col>
               </Row>
-              {this.state.showPrint && (
-                <NewWindow>
-                  <SalePrint />
-                </NewWindow>
-              )}
             </div>
           );
         }}
