@@ -28,7 +28,7 @@
     "graphql-relay": "0.5.5",
     "gulp": "3.9.1",
     "gulp-clean": "0.4.0",
-    "gulp-typescript": "4.0.2",
+    "gulp-typescript": "5.0.0",
     "mysql2": "1.6.4",
     "nodemon": "1.18.6",
     "sequelize": "4.41.2",
