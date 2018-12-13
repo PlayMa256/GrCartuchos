@@ -101,10 +101,10 @@
   version "5.5.0"
   resolved "https://registry.yarnpkg.com/@types/semver/-/semver-5.5.0.tgz#146c2a29ee7d3bae4bf2fcb274636e264c813c45"
 
-"@types/sequelize@4.27.32":
-  version "4.27.32"
-  resolved "https://registry.yarnpkg.com/@types/sequelize/-/sequelize-4.27.32.tgz#0f42e75e8d7b485cece3561b2d097c11d0e8fdbc"
-  integrity sha512-M4iFjZLXDdjqnyKaxz9I5XlVFr4/WBvFYyd8oLU5YsKcXGeppMl6nNo9EBsdDgOOirJcyH2JkJEUhbhegZ6MqA==
+"@types/sequelize@4.27.33":
+  version "4.27.33"
+  resolved "https://registry.yarnpkg.com/@types/sequelize/-/sequelize-4.27.33.tgz#1e906565f371c7efbda0bf2bfa322bea4b5bb1a2"
+  integrity sha512-4w36T30hQKtsVj3BWktRauAls+amAkJsjn6EdQBQ5Pq5iiMm2qRgdFsQj/OHYM1LCYtH7eR4/g4ffbmFux1q2A==
   dependencies:
     "@types/bluebird" "*"
     "@types/continuation-local-storage" "*"
@@ -2931,9 +2931,10 @@ sequelize-cli@^5.2.0:
     umzug "^2.1.0"
     yargs "^12.0.2"
 
-sequelize@4.41.2:
-  version "4.41.2"
-  resolved "https://registry.yarnpkg.com/sequelize/-/sequelize-4.41.2.tgz#bb9ba30d72e9eeb883c9861cd0e2cac672010883"
+sequelize@4.42.0:
+  version "4.42.0"
+  resolved "https://registry.yarnpkg.com/sequelize/-/sequelize-4.42.0.tgz#439467ba7bfe7d5afcc56d62b3e091860fbf18f3"
+  integrity sha512-qxAYnX4rcv7PbNtEidb56REpxNJCdbN0qyk1jb3+e6sE7OrmS0nYMU+MFVbNTJtZfSpOEEL1TX0TkMw+wzZBxg==
   dependencies:
     bluebird "^3.5.0"
     cls-bluebird "^2.1.0"
