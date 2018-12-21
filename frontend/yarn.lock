@@ -7441,10 +7441,10 @@ webpack-merge@4.1.5:
   dependencies:
     lodash "^4.17.5"
 
-webpack-plugin-serve@0.2.2:
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/webpack-plugin-serve/-/webpack-plugin-serve-0.2.2.tgz#e5dee6446aae517dae603d2232e4533bbf6cb124"
-  integrity sha512-L6BvPNBwiklLnPlXYBJp06xJW5gKb2BuTEE0W9vyHouy8nKbCRZe+due/2gMUcueznc4/cFvtPzuOWHPHfCQww==
+webpack-plugin-serve@0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/webpack-plugin-serve/-/webpack-plugin-serve-0.3.0.tgz#4e23cb6a8beb7a04d4ca6d9495ee6a8694ff2be7"
+  integrity sha512-HxMN4OGDjBJ/1J0Pvpi2UZSUApWOr1yLjfZ99RkrWH6W8IDlTRKy8Ey3VqEloCEEViM0WJh3yY4lWz3vbVtsgw==
   dependencies:
     chalk "^2.4.1"
     connect-history-api-fallback "^1.5.0"
