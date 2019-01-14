@@ -44,7 +44,7 @@
     "react-relay": "1.7.0",
     "react-releasy": "0.1.0",
     "react-router-dom": "4.3.1",
-    "react-transition-group": "2.5.2",
+    "react-transition-group": "2.5.3",
     "reactstrap": "7.0.1",
     "relay-compiler": "^1.6.2",
     "relay-devtools": "^1.4.0",
