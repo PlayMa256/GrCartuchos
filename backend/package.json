@@ -22,7 +22,7 @@
     "@types/graphql": "14.0.5",
     "@types/jsonwebtoken": "8.3.0",
     "@types/node": "10.12.18",
-    "@types/sequelize": "4.27.33",
+    "@types/sequelize": "4.27.34",
     "bcryptjs": "2.4.3",
     "express": "4.16.4",
     "graphql-relay": "0.5.5",
