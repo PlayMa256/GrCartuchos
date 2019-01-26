@@ -41,7 +41,7 @@
     "react": "16.7.0",
     "react-chartjs-2": "2.7.4",
     "react-dom": "16.7.0",
-    "react-relay": "1.7.0",
+    "react-relay": "2.0.0",
     "react-releasy": "0.1.0",
     "react-router-dom": "4.3.1",
     "react-transition-group": "2.5.3",
