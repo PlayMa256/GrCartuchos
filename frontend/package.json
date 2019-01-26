@@ -20,7 +20,7 @@
     "css-hot-loader": "1.4.3",
     "css-loader": "2.1.0",
     "eslint": "5.12.1",
-    "eslint-config-prettier": "3.6.0",
+    "eslint-config-prettier": "4.0.0",
     "eslint-config-standard-react": "7.0.2",
     "eslint-plugin-import": "2.14.0",
     "eslint-plugin-prettier": "3.0.1",
