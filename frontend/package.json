@@ -46,7 +46,7 @@
     "react-router-dom": "4.3.1",
     "react-transition-group": "2.5.3",
     "reactstrap": "7.1.0",
-    "relay-compiler": "^1.6.2",
+    "relay-compiler": "^2.0.0",
     "relay-devtools": "^1.4.0",
     "sass-loader": "7.1.0",
     "simple-line-icons": "2.4.1",
