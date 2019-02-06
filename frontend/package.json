@@ -40,7 +40,7 @@
     "prettier": "1.16.3",
     "react": "16.8.1",
     "react-chartjs-2": "2.7.4",
-    "react-dom": "16.8.0",
+    "react-dom": "16.8.1",
     "react-relay": "2.0.0",
     "react-releasy": "0.1.0",
     "react-router-dom": "4.3.1",
