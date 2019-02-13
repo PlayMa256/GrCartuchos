@@ -75,10 +75,10 @@
   version "14.0.1"
   resolved "https://registry.yarnpkg.com/@types/graphql/-/graphql-14.0.1.tgz#ff44c20fefdf0cf8c390f64b0dfbbc3c10dbaa87"
 
-"@types/graphql@14.0.5":
-  version "14.0.5"
-  resolved "https://registry.yarnpkg.com/@types/graphql/-/graphql-14.0.5.tgz#e696292fd2d77dc168b5b791710f83463aa39abd"
-  integrity sha512-bwGYLE0SRy5ZraC91dqI2bxbspfm10kyJ2Yjuvk4OjdGznh7fkoWW+xXZHfFydJaqu9syZi099cpiZw3GlPDiA==
+"@types/graphql@14.0.6":
+  version "14.0.6"
+  resolved "https://registry.yarnpkg.com/@types/graphql/-/graphql-14.0.6.tgz#bf9a4e7faab6b694cb98833b5b6ef018d966df06"
+  integrity sha512-k1kD7AC0PVmcwY6eWLbNElBVcYS/9JYwr6iUPEULydO/Qe22bDuUJKBK3dTGiUXYqUPb3Ws0mIKaSvelvxUTww==
 
 "@types/jsonwebtoken@8.3.0":
   version "8.3.0"
@@ -98,10 +98,10 @@
   version "10.11.4"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-10.11.4.tgz#e8bd933c3f78795d580ae41d86590bfc1f4f389d"
 
-"@types/node@10.12.21":
-  version "10.12.21"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.12.21.tgz#7e8a0c34cf29f4e17a36e9bd0ea72d45ba03908e"
-  integrity sha512-CBgLNk4o3XMnqMc0rhb6lc77IwShMEglz05deDcn2lQxyXEZivfwgYJu7SMha9V5XcrP6qZuevTHV/QrN2vjKQ==
+"@types/node@11.9.1":
+  version "11.9.1"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-11.9.1.tgz#38fd4be2e0f1b1b94e713599afc43f4b2343c61e"
+  integrity sha512-XJHvu7fvycZ7ORTyThXiKCtld+R4Y1GGerYRrVSf/GhaNahRBIf/Nx+7Xh3AvI5nudOVt/L671CxHGkJt1/+hQ==
 
 "@types/range-parser@*":
   version "1.2.2"
@@ -333,7 +333,7 @@ async-done@^1.2.0, async-done@^1.2.2:
     process-nextick-args "^1.0.7"
     stream-exhaust "^1.0.1"
 
-async-each@^1.0.0:
+async-each@^1.0.0, async-each@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/async-each/-/async-each-1.0.1.tgz#19d386a1d9edc6e7c1c85d388aedbcc56d33602d"
 
@@ -432,7 +432,7 @@ brace-expansion@^1.1.7:
     balanced-match "^1.0.0"
     concat-map "0.0.1"
 
-braces@^2.3.0, braces@^2.3.1:
+braces@^2.3.0, braces@^2.3.1, braces@^2.3.2:
   version "2.3.2"
   resolved "https://registry.yarnpkg.com/braces/-/braces-2.3.2.tgz#5979fd3f14cd531565e5fa2df1abfff1dfaee729"
   dependencies:
@@ -504,7 +504,7 @@ chalk@^2.0.1:
     escape-string-regexp "^1.0.5"
     supports-color "^5.3.0"
 
-chokidar@^2.0.0, chokidar@^2.0.4:
+chokidar@^2.0.0:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-2.0.4.tgz#356ff4e2b0e8e43e322d18a372460bbcf3accd26"
   integrity sha512-z9n7yt9rOvIJrMhvDtDictKrkFHeihkNl6uWMmZlmL6tJtX9Cs+87oK+teBx+JIgzvbX3yZHT3eF8vpbDxHJXQ==
@@ -523,6 +523,25 @@ chokidar@^2.0.0, chokidar@^2.0.4:
     upath "^1.0.5"
   optionalDependencies:
     fsevents "^1.2.2"
+
+chokidar@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-2.1.0.tgz#5fcb70d0b28ebe0867eb0f09d5f6a08f29a1efa0"
+  integrity sha512-5t6G2SH8eO6lCvYOoUpaRnF5Qfd//gd7qJAkwRUw9qlGVkiQ13uwQngqbWWaurOsaAm9+kUGbITADxt6H0XFNQ==
+  dependencies:
+    anymatch "^2.0.0"
+    async-each "^1.0.1"
+    braces "^2.3.2"
+    glob-parent "^3.1.0"
+    inherits "^2.0.3"
+    is-binary-path "^1.0.0"
+    is-glob "^4.0.0"
+    normalize-path "^3.0.0"
+    path-is-absolute "^1.0.0"
+    readdirp "^2.2.1"
+    upath "^1.1.0"
+  optionalDependencies:
+    fsevents "^1.2.7"
 
 chownr@^1.0.1:
   version "1.1.1"
@@ -833,9 +852,10 @@ delegates@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/delegates/-/delegates-1.0.0.tgz#84c6e159b81904fdca59a0ef44cd870d31250f9a"
 
-denque@1.3.0:
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/denque/-/denque-1.3.0.tgz#681092ef44a630246d3f6edb2a199230eae8e76b"
+denque@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/denque/-/denque-1.4.0.tgz#79e2f0490195502107f24d9553f374837dabc916"
+  integrity sha512-gh513ac7aiKrAgjiIBWZG0EASyDF9p4JMWwKA8YU5s9figrL5SRNEMT6FDynsegakuhWd1wVqTvqvqAoDxw7wQ==
 
 depd@^1.1.0, depd@~1.1.2:
   version "1.1.2"
@@ -1233,6 +1253,14 @@ fs.realpath@^1.0.0:
 fsevents@^1.2.2:
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/fsevents/-/fsevents-1.2.4.tgz#f41dcb1af2582af3692da36fc55cbd8e1041c426"
+  dependencies:
+    nan "^2.9.2"
+    node-pre-gyp "^0.10.0"
+
+fsevents@^1.2.7:
+  version "1.2.7"
+  resolved "https://registry.yarnpkg.com/fsevents/-/fsevents-1.2.7.tgz#4851b664a3783e52003b3c66eb0eee1074933aa4"
+  integrity sha512-Pxm6sI2MeBD7RdD12RYsqaP0nMiwx8eZBXCa6z2L+mRHm2DYrOYwihmhjpkdjUHwQhslWQjRpEgNq4XvBmaAuw==
   dependencies:
     nan "^2.9.2"
     node-pre-gyp "^0.10.0"
@@ -2015,13 +2043,17 @@ lowercase-keys@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/lowercase-keys/-/lowercase-keys-1.0.1.tgz#6f9e30b47084d971a7c820ff15a6c5167b74c26f"
 
-lru-cache@2.5.0:
-  version "2.5.0"
-  resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-2.5.0.tgz#d82388ae9c960becbea0c73bb9eb79b6c6ce9aeb"
-
-lru-cache@4.1.3, lru-cache@^4.0.1, lru-cache@^4.1.1:
+lru-cache@^4.0.1, lru-cache@^4.1.1:
   version "4.1.3"
   resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-4.1.3.tgz#a1175cf3496dfc8436c156c334b4955992bce69c"
+  dependencies:
+    pseudomap "^1.0.2"
+    yallist "^2.1.2"
+
+lru-cache@^4.1.3:
+  version "4.1.5"
+  resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-4.1.5.tgz#8bbe50ea85bed59bc9e33dcab8235ee9bcf443cd"
+  integrity sha512-sWZlbEP2OsHNkXrMl5GYk/jKk70MBng6UU4YI/qGDYbgf6YbP4EvmqISbXCoJiRKs+1bSpFHVgQxvJ17F2li5g==
   dependencies:
     pseudomap "^1.0.2"
     yallist "^2.1.2"
@@ -2202,24 +2234,26 @@ mute-stdout@^1.0.0:
   resolved "https://registry.yarnpkg.com/mute-stdout/-/mute-stdout-1.0.1.tgz#acb0300eb4de23a7ddeec014e3e96044b3472331"
   integrity sha512-kDcwXR4PS7caBpuRYYBUz9iVixUk3anO3f5OYFiIPwK/20vCzKCHyKoulbiDY1S53zD2bxUpxN/IJ+TnXjfvxg==
 
-mysql2@1.6.4:
-  version "1.6.4"
-  resolved "https://registry.yarnpkg.com/mysql2/-/mysql2-1.6.4.tgz#5c7dba8b78525bd4f01c99b3f3327670df675e96"
+mysql2@1.6.5:
+  version "1.6.5"
+  resolved "https://registry.yarnpkg.com/mysql2/-/mysql2-1.6.5.tgz#6695304fa2ce793dda5c98e8bbec65cbd2e6cb9d"
+  integrity sha512-zedaOOyb3msuuZcJJnxIX/EGOpmljDG7B+UevRH5lqcv+yhy9eCwkArBz8/AO+/rlY3/oCsOdG8R5oD6k0hNfg==
   dependencies:
-    denque "1.3.0"
+    denque "^1.4.0"
     generate-function "^2.3.1"
     iconv-lite "^0.4.24"
     long "^4.0.0"
-    lru-cache "4.1.3"
-    named-placeholders "1.1.1"
-    seq-queue "0.0.5"
-    sqlstring "2.3.1"
+    lru-cache "^4.1.3"
+    named-placeholders "^1.1.2"
+    seq-queue "^0.0.5"
+    sqlstring "^2.3.1"
 
-named-placeholders@1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/named-placeholders/-/named-placeholders-1.1.1.tgz#3b7a0d26203dd74b3a9df4c9cfb827b2fb907e64"
+named-placeholders@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/named-placeholders/-/named-placeholders-1.1.2.tgz#ceb1fbff50b6b33492b5cf214ccf5e39cef3d0e8"
+  integrity sha512-wiFWqxoLL3PGVReSZpjLVxyJ1bRqe+KKJVbr4hGs1KWfTZTQyezHFBbuKj9hsizHyGV2ne7EMjHdxEGAybD5SA==
   dependencies:
-    lru-cache "2.5.0"
+    lru-cache "^4.1.3"
 
 nan@^2.9.2:
   version "2.11.1"
@@ -2276,12 +2310,12 @@ node-pre-gyp@^0.10.0:
     semver "^5.3.0"
     tar "^4"
 
-nodemon@1.18.9:
-  version "1.18.9"
-  resolved "https://registry.yarnpkg.com/nodemon/-/nodemon-1.18.9.tgz#90b467efd3b3c81b9453380aeb2a2cba535d0ead"
-  integrity sha512-oj/eEVTEI47pzYAjGkpcNw0xYwTl4XSTUQv2NPQI6PpN3b75PhpuYk3Vb3U80xHCyM2Jm+1j68ULHXl4OR3Afw==
+nodemon@1.18.10:
+  version "1.18.10"
+  resolved "https://registry.yarnpkg.com/nodemon/-/nodemon-1.18.10.tgz#3ba63f64eb4c283cf3e4f75f30817e9d4f393afe"
+  integrity sha512-we51yBb1TfEvZamFchRgcfLbVYgg0xlGbyXmOtbBzDwxwgewYS/YbZ5tnlnsH51+AoSTTsT3A2E/FloUbtH8cQ==
   dependencies:
-    chokidar "^2.0.4"
+    chokidar "^2.1.0"
     debug "^3.1.0"
     ignore-by-default "^1.0.1"
     minimatch "^3.0.4"
@@ -2320,6 +2354,11 @@ normalize-path@^2.1.1:
   resolved "https://registry.yarnpkg.com/normalize-path/-/normalize-path-2.1.1.tgz#1ab28b556e198363a8c1a6f7e6fa20137fe6aed9"
   dependencies:
     remove-trailing-separator "^1.0.1"
+
+normalize-path@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/normalize-path/-/normalize-path-3.0.0.tgz#0dcd69ff23a1c9b11fd0978316644a0388216a65"
+  integrity sha512-6eZs5Ls3WtCisHWp9S2GUy8dqkpGi4BVSz3GaqiE6ezub0512ESztXUwUB6C6IKbQkY2Pnb/mD4WYojCRwcwLA==
 
 now-and-later@^2.0.0:
   version "2.0.0"
@@ -2750,7 +2789,7 @@ readable-stream@^2.0.0, readable-stream@^2.0.1, readable-stream@^2.0.2, readable
     string_decoder "~1.1.1"
     util-deprecate "~1.0.1"
 
-readdirp@^2.0.0:
+readdirp@^2.0.0, readdirp@^2.2.1:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/readdirp/-/readdirp-2.2.1.tgz#0e87622a3325aa33e892285caf8b4e846529a525"
   dependencies:
@@ -2934,9 +2973,10 @@ send@0.16.2:
     range-parser "~1.2.0"
     statuses "~1.4.0"
 
-seq-queue@0.0.5:
+seq-queue@^0.0.5:
   version "0.0.5"
   resolved "https://registry.yarnpkg.com/seq-queue/-/seq-queue-0.0.5.tgz#d56812e1c017a6e4e7c3e3a37a1da6d78dd3c93e"
+  integrity sha1-1WgS4cAXpuTnw+Ojeh2m143TyT4=
 
 sequelize-cli@^5.2.0:
   version "5.2.0"
@@ -3117,9 +3157,10 @@ split-string@^3.0.1, split-string@^3.0.2:
   dependencies:
     extend-shallow "^3.0.0"
 
-sqlstring@2.3.1:
+sqlstring@^2.3.1:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/sqlstring/-/sqlstring-2.3.1.tgz#475393ff9e91479aea62dcaf0ca3d14983a7fb40"
+  integrity sha1-R1OT/56RR5rqYtyvDKPRSYOn+0A=
 
 stack-trace@0.0.10:
   version "0.0.10"
@@ -3432,7 +3473,7 @@ unzip-response@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/unzip-response/-/unzip-response-2.0.1.tgz#d2f0f737d16b0615e72a6935ed04214572d56f97"
 
-upath@^1.0.5:
+upath@^1.0.5, upath@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/upath/-/upath-1.1.0.tgz#35256597e46a581db4793d0ce47fa9aebfc9fabd"
 
